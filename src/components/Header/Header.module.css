@@ -1,0 +1,27 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 152px;
+  width: 100%;
+
+  background-color: #2f2f2f;
+}
+
+.name {
+  color: #194977;
+  text-decoration: dashed;
+  outline: none;
+
+  font-size: large;
+
+  margin-left: 120px;
+}
+
+.linksContainer span {
+  margin: 0px 21px;
+
+  text-decoration: none;
+  color: white;
+}
