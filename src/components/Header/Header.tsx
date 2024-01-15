@@ -1,7 +1,15 @@
 import { Link } from 'react-router-dom';
 import style from './Header.module.css';
+import curriculo from '../../resume/curriculo-igor-righi.pdf';
 
 function Header() {
+  const handleBtnDownload = () => {
+    const link = document.createElement('a');
+    link.href = curriculo;
+    link.download = 'curriculo-igor-righi';
+    link.click();
+  };
+
   return (
     <div className={ style.headerContainer }>
       <Link to="/">
@@ -34,7 +42,11 @@ function Header() {
         </Link>
       </div>
       <div>
-        <button>Meu Currículo</button>
+        <button
+          onClick={ handleBtnDownload }
+        >
+          Meu Currículo
+        </button>
       </div>
     </div>
   );

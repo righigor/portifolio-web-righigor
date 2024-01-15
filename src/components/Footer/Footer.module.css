@@ -1,0 +1,10 @@
+div {
+  background-color: gray;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 50px;
+}
