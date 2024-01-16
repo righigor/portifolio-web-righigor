@@ -1,12 +1,25 @@
+import { Link } from 'react-router-dom';
 import { Courses } from '../../types/Courses';
-import { Schools } from '../../types/Schools';
+import style from './CourseCard.module.css';
 
-function CourseCard(content: Courses[] | Schools[]) {
+type CourseCardProp = {
+  content: Courses[]
+};
+
+function CourseCard({ content }: CourseCardProp) {
   const array = content;
   return (
-    <div>
+    <div className={ style.cardContainer }>
       { array.map((course, i) => (
-        <div key={ i }>{ course.description }</div>
+        <Link to={ `/education/${course.id}` } key={ i } className={ style.container }>
+          <div>
+            <img src={ course.certificate.image } alt="" width="200px" />
+          </div>
+          <div>
+            <h2>{course.name}</h2>
+          </div>
+        </Link>
+
       )) }
 
     </div>

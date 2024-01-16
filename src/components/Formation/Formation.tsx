@@ -8,16 +8,18 @@ import CourseCard from '../CourseCard/CourseCard';
 const tagSearchBar = ['Front-End', 'Back-End', 'IA', 'Python', 'Machine Learning'];
 
 function Formation() {
-  const [content, setContent] = useState<Courses[] | Schools[]>(courses);
+  const [contentCourse, setContentCourse] = useState<Courses[]>(courses);
+  const [contentSchool, setContentSchool] = useState<Schools[]>(schools);
+  const [exibition, setExibition] = useState(true);
 
   const handleCourseBtn = () => {
-    setContent(courses);
-    console.log(content);
+    setContentCourse(courses);
+    setExibition(true);
   };
 
   const handleInstitutionsBtn = () => {
-    setContent(schools);
-    console.log(content);
+    setContentSchool(schools);
+    setExibition(false);
   };
 
   return (
@@ -48,10 +50,9 @@ function Formation() {
           </button>
         ))}
       </div>
-
-      {/* <CourseCard
-        content={ content }
-      /> */}
+      { exibition ? <CourseCard
+        content={ contentCourse }
+      /> : <h2>test</h2> }
     </>
   );
 }

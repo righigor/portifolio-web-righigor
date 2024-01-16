@@ -7,9 +7,9 @@ import {
   descOOP, tagOOP,
   descIntroML, tagIntroML,
 } from './description.ts';
-import certFundWeb from './certificates/fundamentos-desenvolvimento-web.pdf';
-import certFronDev from './certificates/desenvolvimento-front-end.pdf';
-import certJava from './certificates/curso-de-java.pdf';
+import certFundWeb from './certificates/fundamentos-desenvolvimento-web.png';
+import certFrontDev from './certificates/desenvolvimento-front-end.png';
+import certJava from './certificates/curso-de-java.png';
 import certIaBoot from './certificates/bootcamp-ia-generativa-aws.png';
 
 export const courses: Courses[] = [
@@ -39,7 +39,7 @@ export const courses: Courses[] = [
     certificate: {
       certificate_number: '',
       link: 'https://www.credential.net/5dd40996-f58e-4665-bef2-1a6ae95fd77e#gs.3o54ph',
-      image: certFronDev,
+      image: certFrontDev,
     },
     date: {
       started_at: '06-2023',

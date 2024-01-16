@@ -8,6 +8,7 @@ import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Education from './pages/Education';
 import Contact from './pages/Contact';
+import CourseDetailed from './pages/CourseDetailed';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="skills" element={ <Skills /> } />
         <Route path="projects" element={ <Projects /> } />
         <Route path="education" element={ <Education /> } />
+        <Route path="education/:id" element={ <CourseDetailed /> } />
         <Route path="contact" element={ <Contact /> } />
       </Route>
       <Route path="/*" element={ <NotFound /> } />
