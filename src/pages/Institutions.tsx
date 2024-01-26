@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import { courses } from '../backend/coursesdb';
 import { Courses } from '../types/Courses';
 import CourseCard from '../components/CourseCard/CourseCard';
@@ -11,6 +12,7 @@ function Institutions() {
     id: 0,
     name: 'Instituição não encontrada',
     description: '',
+    image: '',
   };
   const { id } = useParams();
   const [contentCourse, setContentCourse] = useState<Courses[]>(courses);
@@ -37,6 +39,9 @@ function Institutions() {
 
   return (
     <div>
+      <Helmet>
+        <title>{ school.name }</title>
+      </Helmet>
       <h1>{ school.name }</h1>
       <p>{ school.description }</p>
       {loading ? <CourseCard content={ filterCourse } /> : undefined}
