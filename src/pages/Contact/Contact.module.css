@@ -4,5 +4,8 @@
   align-items: center;
   width: 100%;
   padding: auto;
-  height: 10rem;
+  height: 18rem;
+  background-color: var(--gray-500);
+  color: white;
+  font-size: 3.5rem;
 }
