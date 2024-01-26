@@ -12,37 +12,39 @@ function Header() {
 
   return (
     <div className={ style.headerContainer }>
-      <Link to="/">
+      <Link to="/" className={ style.name }>
         <div>
-          <span className={ style.name }>Igor Righi</span>
+          <span>Igor Righi</span>
         </div>
       </Link>
 
       <div className={ style.linksContainer }>
-        <Link to="about-me">
+        <Link to="about-me" className={ style.linkStyle }>
           <span>
             Sobre Mim
           </span>
         </Link>
 
-        <Link to="skills">
+        <Link to="skills" className={ style.linkStyle }>
           <span>Habilidades</span>
         </Link>
 
-        <Link to="projects">
+        <Link to="projects" className={ style.linkStyle }>
           <span>Projetos</span>
         </Link>
 
-        <Link to="education">
+        <Link to="education" className={ style.linkStyle }>
           <span>Formação</span>
         </Link>
 
-        <Link to="contact">
+        <Link to="contact" className={ style.linkStyle }>
           <span>Contato</span>
         </Link>
       </div>
       <div>
         <button
+          title="Faça download do meu currículo"
+          className={ style.btn }
           onClick={ handleBtnDownload }
         >
           Meu Currículo
