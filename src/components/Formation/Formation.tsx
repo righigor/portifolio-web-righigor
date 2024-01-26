@@ -6,6 +6,7 @@ import { schools } from '../../backend/schoolsdb';
 import { Courses } from '../../types/Courses';
 import { Schools } from '../../types/Schools';
 import CourseCard from '../CourseCard/CourseCard';
+import InstitutionCard from '../InstitutionCard/InstitutionCard';
 
 const tagSearchBar = ['All', 'Front-End', 'JavaScript', 'Back-End', 'IA', 'Python', 'Machine Learning'];
 
@@ -30,6 +31,7 @@ function Formation() {
 
   const handleCourseBtn = () => {
     setContentCourse(courses);
+    setFilterCourse(courses);
     setExibition(true);
   };
 
@@ -74,9 +76,9 @@ function Formation() {
           </button>
         ))}
       </div>
-      { exibition ? <CourseCard
-        content={ filterCourse }
-      /> : <h2>test</h2> }
+      { exibition
+        ? <CourseCard content={ filterCourse } />
+        : <InstitutionCard content={ contentSchool } /> }
     </>
   );
 }
