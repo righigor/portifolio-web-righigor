@@ -38,6 +38,7 @@ function Institutions() {
   return (
     <div>
       <h1>{ school.name }</h1>
+      <p>{ school.description }</p>
       {loading ? <CourseCard content={ filterCourse } /> : undefined}
     </div>
   );
