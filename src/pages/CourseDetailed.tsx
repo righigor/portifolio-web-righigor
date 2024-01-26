@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { courses } from '../backend/coursesdb';
 import { Courses } from '../types/Courses';
@@ -25,7 +25,9 @@ function CourseDetailed() {
       </Helmet>
       <div>
         <h2>{course?.name}</h2>
-        <h4>{school?.name}</h4>
+        <Link to={ `/institutions/${school?.id}` }>
+          <h4>{school?.name}</h4>
+        </Link>
         <img
           src={ course?.certificate.image }
           alt={ `Certifica de ${course?.name}` }
@@ -40,7 +42,7 @@ function CourseDetailed() {
         <div>
           <h3>Iniciado em:</h3>
           <p>{course?.date.started_at}</p>
-          <h3>Terminado em:</h3>
+          <h3>Finalizado em:</h3>
           <p>{course?.date.ended_at}</p>
         </div>
       </div>

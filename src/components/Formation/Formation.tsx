@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet';
 import { courses } from '../../backend/coursesdb';
@@ -6,7 +7,7 @@ import { Courses } from '../../types/Courses';
 import { Schools } from '../../types/Schools';
 import CourseCard from '../CourseCard/CourseCard';
 
-const tagSearchBar = ['All', 'Front-End', 'Back-End', 'IA', 'Python', 'Machine Learning'];
+const tagSearchBar = ['All', 'Front-End', 'JavaScript', 'Back-End', 'IA', 'Python', 'Machine Learning'];
 
 function Formation() {
   const [contentCourse, setContentCourse] = useState<Courses[]>(courses);
@@ -16,16 +17,16 @@ function Formation() {
   const [exibition, setExibition] = useState(true);
 
   const filterData = (tag: string) => {
+    const data = contentCourse.filter((c) => c.tags.includes(tag));
+    setFilterCourse(data);
     if (tag === 'All') {
       setFilterCourse(courses);
     }
-    const data = contentCourse.filter((c) => c.tags.includes(tag));
-    setFilterCourse(data);
   };
 
-  // useEffect(() => {
-  //   filterData(filterTag);
-  // }, [filterTag]);
+  useEffect(() => {
+    filterData(filterTag);
+  }, [filterTag]);
 
   const handleCourseBtn = () => {
     setContentCourse(courses);
