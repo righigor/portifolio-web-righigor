@@ -5,7 +5,7 @@ import NotFound from './pages/NotFound';
 import Layout from './components/Layout';
 import AboutMe from './pages/AboutMe';
 import Skills from './pages/Skills';
-import Projects from './pages/Projects';
+import Projects from './pages/Projects/Projects';
 import Education from './pages/Education/Education';
 import Contact from './pages/Contact/Contact';
 import CourseDetailed from './pages/CourseDetailed/CourseDetailed';
