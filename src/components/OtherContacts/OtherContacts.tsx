@@ -22,24 +22,26 @@ function OtherContacts() {
   };
 
   return (
-    <div>
-      <h3>Outras formas de entrar em contato</h3>
-      <p>Se preferir me contactar de forma de diferente, pode me procurar em qualquer uma das redes abaixo:</p>
+    <div className={ style.container }>
+      <div className={ style.header }>
+        <h3>Outras formas de entrar em contato</h3>
+        <p>Se preferir me contactar de forma de diferente, pode me procurar em qualquer uma das redes abaixo:</p>
+      </div>
 
-      <ul>
-        <li>
-          <Link to={ user.contact.linkedin }>
+      <ul className={ style.linkContainer }>
+        <li className={ style.liLink }>
+          <a href={ user.contact.linkedin } target="_blank" rel="noopener noreferrer">
             <img src={ linkedin } alt="Linkedin logo" />
             <p>Linkedin</p>
-          </Link>
+          </a>
         </li>
-        <li>
-          <Link to={ user.contact.wpp }>
+        <li className={ style.liLink }>
+          <a href={ user.contact.wpp } target="_blank" rel="noopener noreferrer">
             <img src={ wpp } alt="WhatsApp logo" />
             <p>WhatsApp</p>
-          </Link>
+          </a>
         </li>
-        <li>
+        <li className={ style.emailLink }>
           <img src={ email } alt="" />
           <p>{ user.contact.email }</p>
           <button
@@ -48,7 +50,7 @@ function OtherContacts() {
             title="Copiar email"
           >
             {copied
-              ? <p>Email copiado</p>
+              ? <p className={ style.btnCopied }>Email copiado!</p>
               : <img src={ copy } alt="Copiar email" />}
           </button>
         </li>

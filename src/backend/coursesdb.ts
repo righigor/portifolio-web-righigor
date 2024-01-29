@@ -11,6 +11,7 @@ import certFundWeb from './certificates/fundamentos-desenvolvimento-web.png';
 import certFrontDev from './certificates/desenvolvimento-front-end.png';
 import certJava from './certificates/curso-de-java.png';
 import certIaBoot from './certificates/bootcamp-ia-generativa-aws.png';
+import logoRasp from '../images/Raspberry-Pi-logo.jpg';
 
 export const courses: Courses[] = [
   {
@@ -90,7 +91,7 @@ export const courses: Courses[] = [
     certificate: {
       certificate_number: '',
       link: '',
-      image: '',
+      image: logoRasp,
     },
     date: {
       started_at: '05-2022',
@@ -107,7 +108,7 @@ export const courses: Courses[] = [
     certificate: {
       certificate_number: '',
       link: '',
-      image: '',
+      image: logoRasp,
     },
     date: {
       started_at: '08-2022',

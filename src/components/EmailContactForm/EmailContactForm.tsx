@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import { ChangeEvent, FormEvent, useState } from 'react';
 import Swal from 'sweetalert2';
+import style from './EmailContactForm.module.css';
 
 function EmailContactForm() {
   const [dataForm, setDataForm] = useState({
@@ -49,8 +50,8 @@ function EmailContactForm() {
   };
 
   return (
-    <div>
-      <form onSubmit={ handleSubmit }>
+    <div className={ style.container }>
+      <form onSubmit={ handleSubmit } className={ style.formContainer }>
         <label htmlFor="name">
           <input
             type="text"
@@ -59,6 +60,7 @@ function EmailContactForm() {
             onChange={ handleChange }
             placeholder="Nome"
             id="name"
+            className={ style.inputArea }
           />
         </label>
         <br />
@@ -70,6 +72,7 @@ function EmailContactForm() {
             onChange={ handleChange }
             placeholder="E-mail"
             id="email"
+            className={ style.inputArea }
           />
         </label>
         <br />
@@ -79,12 +82,11 @@ function EmailContactForm() {
             value={ dataForm.message }
             onChange={ handleChange }
             placeholder="Digite sua mensagem"
-            cols={ 22 }
-            rows={ 5 }
+            className={ style.inputArea }
           />
         </label>
         <br />
-        <button type="submit">
+        <button type="submit" className={ style.btn }>
           Enviar
         </button>
       </form>

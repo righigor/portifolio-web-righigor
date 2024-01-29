@@ -1,10 +1,31 @@
-div {
-  background-color: gray;
-}
-
 .container {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  height: 8rem;
   width: 100%;
-  justify-content: center;
-  gap: 50px;
+
+  gap: 2rem;
+  background-color: var(--blue-200);
+  /* opacity: 70%; */
+
+}
+
+.logos a {
+  margin-right: 1rem;
+}
+
+.linksContainer span {
+  margin: 0px 1rem;
+
+  color: white;
+}
+
+.linkStyle {
+  text-decoration: none;
+}
+
+.name {
+  color: var(--blue-500);
 }

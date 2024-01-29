@@ -2,12 +2,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* background-color: var(--gray-500); */
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-}
 :root {
+  --gray-200: #252525;
   --gray-500: #2f2f2f;
+
+  --blue-100: #25517a;
+  --blue-200: #2a3155;
+  --blue-500: #194977;
 }

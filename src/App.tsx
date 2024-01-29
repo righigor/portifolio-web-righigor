@@ -6,10 +6,10 @@ import Layout from './components/Layout';
 import AboutMe from './pages/AboutMe';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
-import Education from './pages/Education';
-import Contact from './pages/Contact';
-import CourseDetailed from './pages/CourseDetailed';
-import Institutions from './pages/Institutions';
+import Education from './pages/Education/Education';
+import Contact from './pages/Contact/Contact';
+import CourseDetailed from './pages/CourseDetailed/CourseDetailed';
+import Institutions from './pages/Institutions/Institutions';
 
 function App() {
   return (

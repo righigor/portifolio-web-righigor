@@ -1,0 +1,33 @@
+.container {
+  background-color: var(--gray-500);
+  padding: 5rem 11rem;
+}
+
+.diretorio {
+  margin-bottom: 2.5rem;
+  color: var(--blue-500);
+}
+
+.diretorioLink {
+  color: white;
+  text-decoration: none;
+}
+
+.diretorioLink:hover {
+  text-decoration: underline;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.description {
+  text-align: justify;
+  color: white;
+  margin-bottom: 2rem;
+}

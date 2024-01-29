@@ -1,33 +1,43 @@
-/* .headerContainer {
+.headerContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
-  height: 152px;
+  height: 6rem;
   width: 100%;
 
-  background-color: #2f2f2f;
+  background-color: var(--gray-500);
+  gap: 2rem;
 }
 
 .name {
-  color: #194977;
-  text-decoration: dashed;
+  color: var(--blue-500);
+  text-decoration: none;
   outline: none;
 
   font-size: large;
-
-  margin-left: 120px;
 }
 
 .linksContainer span {
-  margin: 0px 21px;
+  margin: 0px 1rem;
 
-  text-decoration: none;
   color: white;
-} */
-.headerContainer {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  gap: 50px;
+}
+
+.linkStyle {
+  text-decoration: none;
+}
+
+.btn {
+  background: none;
+  cursor: pointer;
+  padding: 0.8rem 4rem;
+  margin: 0;
+  outline: none;
+
+  border-radius: 0.7rem;
+  border-color: var(--blue-500);
+  border-style: solid;
+
+  color: white;
 }
