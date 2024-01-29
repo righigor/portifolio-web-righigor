@@ -1,0 +1,64 @@
+.cardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+
+  margin-bottom: 10rem;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-decoration: none;
+  background-color: var(--gray-200);
+
+  position: relative;
+  overflow: hidden;
+
+  border: 1px solid transparent;
+  border-radius: 1rem;
+
+  padding: 2rem 0.5rem;
+}
+
+.container:hover {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: 700ms;
+}
+
+.imgCard {
+  width: 18rem;
+  height: 13.5rem;
+
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.nameCard {
+  text-align: center;
+  color: white;
+}
+
+.nameCard:hover {
+  color: var(--blue-500);
+
+  text-decoration: underline;
+  transition: 300ms;
+}
+
+.sm {
+  position: absolute;
+  right: 0;
+  bottom: 4;
+  margin-top: 5px;
+  margin-right: 3.9rem;
+  color: var(--blue-500);
+}
+
+.sm:hover {
+  color: white;
+
+  transition: 750ms;
+}
