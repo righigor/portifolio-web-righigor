@@ -6,7 +6,9 @@ import { schools } from '../../backend/schoolsdb';
 import { Courses } from '../../types/Courses';
 import { Schools } from '../../types/Schools';
 import CourseCard from '../CourseCard/CourseCard';
-import InstitutionCard from '../InstitutionCard/InstitutionCard';
+import style from './Formation.module.css';
+import lupa from '../../icons/lupa-icon.svg';
+import InstitutionCard from '../InstitutionCard/InstitutionCard.tsx';
 
 const tagSearchBar = ['All', 'Front-End', 'JavaScript', 'Back-End', 'IA', 'Python', 'Machine Learning'];
 
@@ -45,16 +47,18 @@ function Formation() {
     filterData(filterTag);
   };
   return (
-    <>
+    <div className={ style.container }>
       <Helmet>
         <title>Formação</title>
       </Helmet>
-      <label htmlFor="">
-        <input type="text" name="" id="" placeholder="Buscar..." />
-        <button>Buscar</button>
-      </label>
+      <div className={ style.searchBar }>
+        <input type="text" name="" id="" placeholder="Buscar..." className={ style.inputSearch } />
+        <button className={ style.searchBtn }>
+          <img src={ lupa } alt="lupa de buscar" />
+        </button>
+      </div>
 
-      <div>
+      <div className={ style.chooseContentContainer }>
         <button
           onClick={ handleCourseBtn }
         >
@@ -66,7 +70,7 @@ function Formation() {
           Instituições
         </button>
       </div>
-      <div>
+      <div className={ style.filterContainer }>
         {tagSearchBar.map((tag, i) => (
           <button
             key={ i }
@@ -79,7 +83,7 @@ function Formation() {
       { exibition
         ? <CourseCard content={ filterCourse } />
         : <InstitutionCard content={ contentSchool } /> }
-    </>
+    </div>
   );
 }
 

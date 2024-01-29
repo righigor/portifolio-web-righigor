@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { courses } from '../backend/coursesdb';
-import { Courses } from '../types/Courses';
-import CourseCard from '../components/CourseCard/CourseCard';
-import { schools } from '../backend/schoolsdb';
-import { Schools } from '../types/Schools';
+import { courses } from '../../backend/coursesdb';
+import { Courses } from '../../types/Courses';
+import CourseCard from '../../components/CourseCard/CourseCard';
+import { schools } from '../../backend/schoolsdb';
+import { Schools } from '../../types/Schools';
+import style from './Institutions.module.css';
 
 function Institutions() {
   const schoolMock: Schools = {
@@ -38,12 +39,18 @@ function Institutions() {
   }, [contentCourse]);
 
   return (
-    <div>
+    <div className={ style.container }>
       <Helmet>
         <title>{ school.name }</title>
       </Helmet>
-      <h1>{ school.name }</h1>
-      <p>{ school.description }</p>
+      <p className={ style.diretorio }>
+        <Link to="/education" className={ style.diretorioLink }>
+          Instituições /
+        </Link>
+        { ` ${school?.name}` }
+      </p>
+      <h1 className={ style.title }>{ school.name }</h1>
+      <p className={ style.description }>{ school.description }</p>
       {loading ? <CourseCard content={ filterCourse } /> : undefined}
     </div>
   );

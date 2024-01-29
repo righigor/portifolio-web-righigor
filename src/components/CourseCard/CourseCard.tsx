@@ -12,11 +12,16 @@ function CourseCard({ content }: CourseCardProp) {
     <div className={ style.cardContainer }>
       { array.map((course, i) => (
         <Link to={ `/education/${course.id}` } key={ i } className={ style.container }>
-          <div>
-            <img src={ course.certificate.image } alt="" width="200px" />
+          <div className={ style.card }>
+            <img
+              src={ course.certificate.image }
+              alt={ `certificado de ${course.name}` }
+              className={ style.imgCard }
+            />
           </div>
           <div>
-            <h2>{course.name}</h2>
+            <h3 className={ style.nameCard }>{course.name}</h3>
+            <p className={ style.sm }>Saiba mais...</p>
           </div>
         </Link>
 
