@@ -33,6 +33,10 @@ function Institutions() {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
     filterData();
     filterSchool();
     setLoading(true);

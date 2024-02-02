@@ -8,8 +8,6 @@
 
   gap: 2rem;
   background-color: var(--blue-200);
-  /* opacity: 70%; */
-
 }
 
 .logos a {
@@ -28,4 +26,70 @@
 
 .name {
   color: var(--blue-500);
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    height: 10rem;
+    gap: 1.5rem;
+  }
+
+  .logos a {
+    margin-right: 1rem;
+  }
+
+  .logos a:nth-child(4) {
+    margin-right: 0;
+  }
+
+  .linksContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .name {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    height: 12rem;
+    gap: 1.5rem;
+  }
+
+  .logos a {
+    margin-right: 1rem;
+  }
+
+  .logos a:nth-child(4) {
+    margin-right: 0;
+  }
+
+  .linksContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    font-size: 1.2rem;
+  }
+
+  .name {
+    font-size: 1.2rem;
+  }
 }

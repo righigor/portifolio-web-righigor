@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import style from './NotFound.module.css';
 
 function NotFound() {
   return (
@@ -7,10 +8,12 @@ function NotFound() {
       <Helmet>
         <title>Page not Found</title>
       </Helmet>
-      <h1>Not Found</h1>
-      <Link to="/">
-        <h2>volte para home page</h2>
-      </Link>
+      <div className={ style.container }>
+        <h1>Not Found</h1>
+        <Link to="/">
+          <h2>volte para home page</h2>
+        </Link>
+      </div>
     </>
   );
 }

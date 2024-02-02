@@ -23,3 +23,5 @@ export const tagOOP = ['Python', 'Object-Oriented Programming', 'Game'];
 export const descIntroML = 'Descubra os fundamentos do Machine Learning, como ele funciona e aprenda a treinar sua própria IA usando ferramentas online gratuitas.';
 
 export const tagIntroML = ['Machine Learning', 'IA'];
+
+export const descTrybewarts = 'Criação de um fomulário em HTML, CSS Flexboxe JavaScript. Simula um site de inscrição da escola Trybewarts com um sistema de verificação basico de login. Projeto realizado durante o curso de Fundamento Web Trybe.';

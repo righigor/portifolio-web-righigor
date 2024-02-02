@@ -21,7 +21,6 @@ function CourseCard({ content }: CourseCardProp) {
           </div>
           <div>
             <h3 className={ style.nameCard }>{course.name}</h3>
-            <p className={ style.sm }>Saiba mais...</p>
           </div>
         </Link>
 

@@ -1,3 +1,33 @@
 .container {
   background-color: var(--gray-500);
 }
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.filterContainer button {
+  background-color: var(--gray-200);
+  border-style: none;
+  border-radius: 3rem;
+  width: 9rem;
+  height: 3rem;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.filterContainer button:nth-child(1) {
+  background: linear-gradient(to right, var(--blue-500), #00F2FE);
+}
+
+.filterContainer button:hover {
+  border: 1px solid white;
+  transition: 700ms;
+}
