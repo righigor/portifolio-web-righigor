@@ -2,17 +2,9 @@ import { Projects } from '../types/Projects';
 import trybelogo from '../images/trybe-logo.png';
 import { descAppReceitas, descFrontStore, descPasswordManager,
   descTestsReact, descTrybetunes, descTrybewarts } from './description';
-import twimg1 from './images/trybewarts/print-site.png';
-import twimg2 from './images/trybewarts/print-html-1.png';
-import twimg3 from './images/trybewarts/print-html-2.png';
-import twimg4 from './images/trybewarts/js.png';
-import twimg5 from './images/trybewarts/css-1.png';
-import twimg6 from './images/trybewarts/css-2.png';
-import twimg7 from './images/trybewarts/css-3.png';
-import pwimg1 from './images/password-manager/capa.png';
-import pwimg2 from './images/password-manager/cadastro-1.png';
-import pwimg3 from './images/password-manager/cadastro-2.png';
-import pwimg4 from './images/password-manager/senha-cadastrada.png';
+import { twimg1, twimg2, twimg3, twimg4, twimg5,
+  twimg6, twimg7 } from './images/trybewarts';
+import { pwimg1, pwimg2, pwimg3, pwimg4 } from './images/password-manager';
 
 export const projects: Projects[] = [
   {

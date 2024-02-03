@@ -1,18 +1,14 @@
 import { Skills, User } from '../types/User';
 import profile from '../images/assets/Foto 3x4.jpg';
-import html from '../icons/skills/html-logo.svg';
-import react from '../icons/skills/react-logo.svg';
-import ts from '../icons/skills/ts-logo.png';
-import js from '../icons/skills/js-logo.svg';
-import cont from '../icons/skills/cont-logo.png';
-import redux from '../icons/skills/redux-logo.png';
-import css from '../icons/skills/css-logo.svg';
-import front from '../icons/skills/front-logo.png';
-import back from '../icons/skills/back-logo.png';
-import python from '../icons/skills/python-logo.svg';
-import docker from '../icons/skills/docker-logo.svg';
-import sql from '../icons/skills/sql-logo.png';
-import poo from '../icons/skills/poo-logo.png';
+import {
+  html, react,
+  ts, js,
+  cont, redux,
+  css, front,
+  back, python,
+  docker, sql,
+  poo,
+} from '../icons/skills';
 
 const skillsArray: Skills[] = [
   {
