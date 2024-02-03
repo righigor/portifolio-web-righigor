@@ -19,6 +19,7 @@ function Formation() {
   const [contentSchool, setContentSchool] = useState<Schools[]>(schools);
   const [exibition, setExibition] = useState(true);
   const [paginaAtual, setPaginaAtual] = useState(1);
+  const [inputFilter, setInputFilter] = useState('');
   const projetosPorPagina = 6;
 
   useEffect(() => {
@@ -36,6 +37,11 @@ function Formation() {
   useEffect(() => {
     filterData(filterTag);
   }, [filterTag]);
+
+  useEffect(() => {
+    const data = contentCourse.filter((c) => c.name.toLowerCase().includes(inputFilter.toLowerCase()));
+    setFilterCourse(data);
+  }, [inputFilter]);
 
   const handleCourseBtn = () => {
     setContentCourse(courses);
@@ -77,7 +83,15 @@ function Formation() {
         <title>Formação</title>
       </Helmet>
       <div className={ style.searchBar }>
-        <input type="text" name="" id="" placeholder="Buscar..." className={ style.inputSearch } />
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Buscar..."
+          className={ style.inputSearch }
+          value={ inputFilter }
+          onChange={ (e) => setInputFilter(e.target.value) }
+        />
         <button className={ style.searchBtn }>
           <img src={ lupa } alt="lupa de buscar" />
         </button>
