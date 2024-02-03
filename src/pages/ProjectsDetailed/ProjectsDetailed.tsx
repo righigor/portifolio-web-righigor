@@ -18,7 +18,7 @@ function ProjectsDetailed() {
   const [school, setSchool] = useState<Schools>();
   const [imgIndex, setImgIndex] = useState(0);
   const [maxLength, setMaxLength] = useState(0);
-
+  console.log(maxLength);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable max-len */
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { user } from '../../backend/userdb';
 import linkedin from '../../icons/linkedin-white-logo.svg';
 import wpp from '../../icons/wpp-white-logo.svg';

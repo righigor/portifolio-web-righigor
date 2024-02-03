@@ -16,8 +16,8 @@ function Institutions() {
     image: '',
   };
   const { id } = useParams();
-  const [contentCourse, setContentCourse] = useState<Courses[]>(courses);
-  const [schoolArray, setSchoolArray] = useState(schools);
+  const [contentCourse] = useState<Courses[]>(courses);
+  const [schoolArray] = useState(schools);
   const [school, setSchool] = useState<Schools>(schoolMock);
   const [filterCourse, setFilterCourse] = useState<Courses[]>(courses);
   const [loading, setLoading] = useState(false);
