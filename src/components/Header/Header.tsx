@@ -2,17 +2,15 @@
 /* eslint-disable react/jsx-indent */
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import style from './Header.module.css';
 import curriculo from '../../resume/igor-righi-curriculo.pdf';
 
 function Header() {
-  const [openMenu, setOpenMenu] = useState(false);
+  const [openMenu] = useState(false);
   const [widthScreen, setWidhScreen] = useState({
     largura: window.innerWidth,
   });
-
+  console.log(widthScreen);
   const atualizarTamanhoDaTela = () => {
     setWidhScreen({
       largura: window.innerWidth,

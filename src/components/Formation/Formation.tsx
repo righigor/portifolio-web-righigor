@@ -62,7 +62,7 @@ function Formation() {
   const indiceInicial = (paginaAtual - 1) * projetosPorPagina;
   const indiceFinal = indiceInicial + projetosPorPagina;
   const projetosDaPagina = filterCourse.slice(indiceInicial, indiceFinal);
-
+  console.log(projetosDaPagina);
   const totalPaginas = Math.ceil(filterCourse.length / projetosPorPagina);
 
   const nextPage = () => {
