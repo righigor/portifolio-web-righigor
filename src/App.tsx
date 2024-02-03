@@ -23,8 +23,8 @@ function App() {
         <Route path="projects/:id" element={ <ProjectsDetailed /> } />
         <Route path="education" element={ <Education /> } />
         <Route path="education/:id" element={ <CourseDetailed /> } />
-        <Route path="contact" element={ <Contact /> } />
         <Route path="institutions/:id" element={ <Institutions /> } />
+        <Route path="contact" element={ <Contact /> } />
         <Route path="/*" element={ <NotFound /> } />
       </Route>
     </Routes>

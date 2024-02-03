@@ -11,6 +11,8 @@
   background-color: var(--gray-700);
   opacity: 98%;
   gap: 2rem;
+
+  z-index: 1000;
 }
 
 .name {

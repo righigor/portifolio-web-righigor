@@ -11,7 +11,7 @@ function NotFound() {
       <div className={ style.container }>
         <h1>Not Found</h1>
         <Link to="/">
-          <h2>volte para home page</h2>
+          <h2>Volte para a página inicial</h2>
         </Link>
       </div>
     </>

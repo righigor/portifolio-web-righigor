@@ -1,6 +1,5 @@
 /* eslint-disable max-len */
 /* eslint-disable react/jsx-max-depth */
-import Slider from 'react-slick';
 import { Helmet } from 'react-helmet';
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
@@ -8,12 +7,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import style from './ProjectsDetailed.module.css';
 import { projects } from '../../backend/projectsdb';
+import { schools } from '../../backend/schoolsdb';
 import { Projects } from '../../types/Projects';
+import { Schools } from '../../types/Schools';
 import githubLogo from '../../icons/github-white-logo.svg';
 
 function ProjectsDetailed() {
   const { id } = useParams();
   const [project, setProject] = useState<Projects>();
+  const [school, setSchool] = useState<Schools>();
   const [imgIndex, setImgIndex] = useState(0);
   const [maxLength, setMaxLength] = useState(0);
 
@@ -24,10 +26,12 @@ function ProjectsDetailed() {
   useEffect(() => {
     const getProject = projects.find((c) => c.id === Number(id));
     setProject(getProject);
+    const getSchool = schools.find((s) => s.id === project?.school_id);
+    setSchool(getSchool);
     if (project !== undefined) {
       setMaxLength(project.images.length);
     }
-  }, [projects, id]);
+  }, [projects, id, school, project]);
 
   const nextImg = () => {
     if (project && project.images.length) {
@@ -40,6 +44,24 @@ function ProjectsDetailed() {
       setImgIndex((imgIndex - 1 + project.images.length) % project.images.length);
     }
   };
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      nextImg();
+    }, 6000); // Troque o valor para ajustar o intervalo de mudança de imagem (em milissegundos)
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [imgIndex]);
+
+  useEffect(() => {
+    nextImg();
+  }, []);
+
+  if (!project) {
+    return <p>Projeto não encontrado</p>;
+  }
 
   return (
     <div className={ style.container }>
@@ -72,7 +94,12 @@ function ProjectsDetailed() {
         </div>
 
         <div className={ style.description }>
-          {project?.description}
+          <p>
+            { project?.description}
+            { school
+              ? <a className={ style.linkSchool } href={ `/institutions/${school?.id}` }>{ `${school?.name}.` }</a>
+              : undefined}
+          </p>
         </div>
       </div>
     </div>

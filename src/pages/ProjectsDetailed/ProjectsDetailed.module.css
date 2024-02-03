@@ -77,17 +77,21 @@
 .carrossel {
   position: relative;
   width: 100%;
-  max-width: 35rem; /* Ajuste conforme necessário */
-  height: 25rem;
+  max-width: 40rem; /* Ajuste conforme necessário */
+  height: 30rem;
   margin: auto;
   overflow: hidden;
   display: flex;
   align-items: center;
+  justify-content: center;
+  background-color: var(--gray-200);
+  border-radius: 1rem;
 }
 
 .carrossel img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .carrossel button {
@@ -106,4 +110,35 @@
 
 .carrossel button:last-child {
   right: 0;
+}
+
+.linkSchool {
+  color: var(--blue-500);
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 11rem 2rem 2rem 2rem;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    color: white;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .carrossel {
+    /* max-width: 25rem; */
+    height: 25rem;
+  }
+
+ 
+
+  .carrossel button {
+    font-size: 18px; /* Ajuste conforme necessário */
+  }
 }
