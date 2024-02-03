@@ -37,8 +37,8 @@ function CourseDetailed() {
         </p>
 
         <div className={ style.title }>
-          <h2>{`${course?.name}`}</h2>
-          <h2>-</h2>
+          <h2 className={ style.name }>{`${course?.name}`}</h2>
+          <h2 className={ style.divisor }>-</h2>
           <Link to={ `/institutions/${school?.id}` } className={ style.titleLink }>
             <h2>{` ${school?.name}`}</h2>
           </Link>
@@ -59,11 +59,11 @@ function CourseDetailed() {
           {course?.description}
         </div>
         <div className={ style.dates }>
-          <div>
+          <div className={ style.dateDiv }>
             <h3>Iniciado em:</h3>
             <p>{course?.date.started_at}</p>
           </div>
-          <div>
+          <div className={ style.dateDiv }>
             <h3>Finalizado em:</h3>
             <p>{course?.date.ended_at}</p>
           </div>

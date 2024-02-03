@@ -1,8 +1,34 @@
+/* eslint-disable max-len */
+/* eslint-disable react/jsx-indent */
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import style from './Header.module.css';
 import curriculo from '../../resume/curriculo-igor-righi.pdf';
 
 function Header() {
+  const [openMenu, setOpenMenu] = useState(false);
+  const [widthScreen, setWidhScreen] = useState({
+    largura: window.innerWidth,
+  });
+
+  const atualizarTamanhoDaTela = () => {
+    setWidhScreen({
+      largura: window.innerWidth,
+    });
+  };
+
+  useEffect(() => {
+    // Adiciona um listener de redimensionamento quando o componente é montado
+    window.addEventListener('resize', atualizarTamanhoDaTela);
+
+    // Remove o listener de redimensionamento quando o componente é desmontado
+    return () => {
+      window.removeEventListener('resize', atualizarTamanhoDaTela);
+    };
+  }, []);
+
   const handleBtnDownload = () => {
     const link = document.createElement('a');
     link.href = curriculo;
@@ -17,8 +43,13 @@ function Header() {
           <span>Igor Righi</span>
         </div>
       </Link>
-
-      <div className={ style.linksContainer }>
+{/*
+      { widthScreen.largura <= 576
+        ? <div className={ style.mobileMenuButton } onClick={ () => setOpenMenu(!openMenu) }>
+            <FontAwesomeIcon icon={ openMenu ? faTimes : faBars } />
+          </div>
+        : undefined} */}
+      <div className={ `${style.linkContainer} ${openMenu ? style.mobileMenuOpen : ''}` }>
         <Link to="about-me" className={ style.linkStyle }>
           <span>
             Sobre Mim
@@ -41,6 +72,7 @@ function Header() {
           <span>Contato</span>
         </Link>
       </div>
+
       <div>
         <button
           title="Faça download do meu currículo"

@@ -14,9 +14,6 @@
   text-decoration: none;
   background-color: var(--gray-200);
 
-  position: relative;
-  overflow: hidden;
-
   border: 1px solid transparent;
   border-radius: 1rem;
 
@@ -61,4 +58,67 @@
   color: white;
 
   transition: 750ms;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 10px;
+    padding-top: 20px;
+  
+    margin-bottom: 10rem;
+  }
+
+  .imgCard {
+    width: 16rem;
+    height: 12rem;
+  }
+
+  .nameCard {
+    width: 16rem;
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 15px;
+    padding-top: 20px;
+  
+    margin-bottom: 10rem;
+  }
+
+  .imgCard {
+    width: 17rem;
+    height: 12rem;
+  }
+
+  .nameCard {
+    width: 17rem;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  .cardContainer {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    gap: 20px;
+    padding-top: 20px;
+  
+    margin-bottom: 10rem;
+  }
+
+
+  .nameCard {
+    width: 18rem;
+    font-size: 1.3rem;
+  }
 }
