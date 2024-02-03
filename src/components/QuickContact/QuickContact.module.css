@@ -28,3 +28,12 @@
   color: white;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 480px) {
+  .container h2 {
+    font-size: 20px;
+  }
+  .btnContact {
+    padding: 0.8rem 2rem;
+  }
+}

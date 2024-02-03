@@ -13,7 +13,7 @@ function AboutMe() {
           Sobre mim
         </title>
       </Helmet>
-      <h1 className={ style.title }>about me</h1>
+      <h1 className={ style.title }>Sobre Mim</h1>
     </div>
   );
 }

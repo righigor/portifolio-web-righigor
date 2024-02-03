@@ -3,6 +3,7 @@ export type User = {
   login: string,
   password: string,
   name: string,
+  profilePic: string,
   skills: Skills[],
   contact: {
     linkedin: string,

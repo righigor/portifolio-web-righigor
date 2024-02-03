@@ -12,7 +12,7 @@ function Contact() {
     <div>
       <Helmet>
         <title>
-          Contact me
+          Contato
         </title>
       </Helmet>
       <h1 className={ style.title }>Contato</h1>

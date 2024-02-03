@@ -1,4 +1,5 @@
 import { Skills, User } from '../types/User';
+import profile from '../images/assets/Foto 3x4.jpg';
 import html from '../icons/skills/html-logo.svg';
 import react from '../icons/skills/react-logo.svg';
 import ts from '../icons/skills/ts-logo.png';
@@ -86,6 +87,7 @@ export const user: User = {
   login: 'righigordev@gmail.com',
   password: '123456',
   name: 'Igor Righi',
+  profilePic: profile,
   skills: skillsArray,
   contact: {
     linkedin: 'https://www.linkedin.com/in/igor-righi/',
