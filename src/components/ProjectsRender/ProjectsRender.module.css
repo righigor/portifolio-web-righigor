@@ -31,3 +31,26 @@
   border: 1px solid white;
   transition: 700ms;
 }
+
+.pagContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+.pagContainer button {
+  padding: 0.8rem;
+  background-color: var(--blue-500);
+  color: white;
+
+  border-radius: 1rem;
+  border-style: none;
+
+  cursor: pointer;
+}
+
+.pagContainer button:disabled {
+  color: rgba(255, 255, 255, 0.255);
+  background-color: var(--blue-200);
+}

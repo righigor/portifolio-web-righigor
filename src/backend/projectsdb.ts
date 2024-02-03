@@ -2,17 +2,9 @@ import { Projects } from '../types/Projects';
 import trybelogo from '../images/trybe-logo.png';
 import { descAppReceitas, descFrontStore, descPasswordManager,
   descTestsReact, descTrybetunes, descTrybewarts } from './description';
-import twimg1 from './images/trybewarts/print-site.png';
-import twimg2 from './images/trybewarts/print-html-1.png';
-import twimg3 from './images/trybewarts/print-html-2.png';
-import twimg4 from './images/trybewarts/js.png';
-import twimg5 from './images/trybewarts/css-1.png';
-import twimg6 from './images/trybewarts/css-2.png';
-import twimg7 from './images/trybewarts/css-3.png';
-import pwimg1 from './images/password-manager/capa.png';
-import pwimg2 from './images/password-manager/cadastro-1.png';
-import pwimg3 from './images/password-manager/cadastro-2.png';
-import pwimg4 from './images/password-manager/senha-cadastrada.png';
+import { twimg1, twimg2, twimg3, twimg4, twimg5,
+  twimg6, twimg7 } from './images/trybewarts';
+import { pwimg1, pwimg2, pwimg3, pwimg4 } from './images/password-manager';
 
 export const projects: Projects[] = [
   {
@@ -20,7 +12,7 @@ export const projects: Projects[] = [
     name: 'Trybewarts',
     school_id: 1,
     description: descTrybewarts,
-    tags: ['Front-End'],
+    tags: ['Front-End', 'CSS', 'JavaScript'],
     github_link: 'https://github.com/righigor/trybe-exercicios/tree/main/01-Fundamentos/Secao05-HTML-e-CSS-Forms-Flexbox-Responsivo/Dia06-Projeto-Trybewarts',
     images: [twimg1, twimg2, twimg3, twimg4, twimg5, twimg6, twimg7],
   },
@@ -29,7 +21,7 @@ export const projects: Projects[] = [
     name: 'Password Manager',
     school_id: 1,
     description: descPasswordManager,
-    tags: ['Front-End'],
+    tags: ['Front-End', 'CSS', 'JavaScript'],
     github_link: 'https://github.com/righigor/trybe-exercicios/tree/main/02-Front-End/Secao02-Intro-ao-React/Dia08-Projeto-Password-Manager',
     images: [pwimg1, pwimg2, pwimg3, pwimg4],
   },
@@ -38,7 +30,7 @@ export const projects: Projects[] = [
     name: 'Trybetunes',
     school_id: 1,
     description: descTrybetunes,
-    tags: ['Front-End'],
+    tags: ['Front-End', 'CSS', 'React', 'TypeScript', 'API'],
     github_link: 'https://github.com/righigor/trybe-exercicios/tree/main/02-Front-End/Secao03-Aprofundando-no-React/Dia04-Projeto-Trybetunes',
     images: [trybelogo],
   },
@@ -47,7 +39,7 @@ export const projects: Projects[] = [
     name: 'Testes em React',
     school_id: 1,
     description: descTestsReact,
-    tags: ['Front-End'],
+    tags: ['Front-End', 'RTL'],
     github_link: 'https://github.com/righigor/trybe-exercicios/tree/main/02-Front-End/Secao04-Testes-Automatizados-com-React-Testing-Library/Dia04-Projeto-Testes-em-React',
     images: [trybelogo],
   },
@@ -56,7 +48,7 @@ export const projects: Projects[] = [
     name: 'Frontend Online Store',
     school_id: 1,
     description: descFrontStore,
-    tags: ['Front-End'],
+    tags: ['Front-End', 'React', 'TypeScript', 'API'],
     github_link: 'https://github.com/righigor/trybe-exercicios/tree/main/02-Front-End/Secao05-Estilizacao-e-Metodologia-Agil/Dia04-Projeto-FrontEnd-Online-Store',
     images: [trybelogo],
   },
@@ -65,7 +57,7 @@ export const projects: Projects[] = [
     name: 'App de receitas',
     school_id: 1,
     description: descAppReceitas,
-    tags: ['Front-End'],
+    tags: ['Front-End', 'React', 'TypeScript', 'API'],
     github_link: 'https://github.com/righigor/trybe-exercicios/tree/main/02-Front-End/Secao08-Projeto-App-de-Receitas/Dia01-Projeto-App-de-Receitas',
     images: [trybelogo],
   },
@@ -73,7 +65,7 @@ export const projects: Projects[] = [
     id: 7,
     name: 'test',
     description: 'description',
-    tags: ['tags'],
+    tags: ['tags', 'Python', 'Back-End'],
     github_link: 'link',
     images: ['img'],
   },

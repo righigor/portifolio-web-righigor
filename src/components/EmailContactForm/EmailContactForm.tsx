@@ -2,6 +2,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import Swal from 'sweetalert2';
 import style from './EmailContactForm.module.css';
+import '@sweetalert2/theme-dark';
 
 function EmailContactForm() {
   const [dataForm, setDataForm] = useState({

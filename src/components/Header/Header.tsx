@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import style from './Header.module.css';
-import curriculo from '../../resume/curriculo-igor-righi.pdf';
+import curriculo from '../../resume/igor-righi-curriculo.pdf';
 
 function Header() {
   const [openMenu, setOpenMenu] = useState(false);

@@ -2,7 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: var(--gray-500); */
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Roboto Condensed', sans-serif; */
 }
 
 :root {

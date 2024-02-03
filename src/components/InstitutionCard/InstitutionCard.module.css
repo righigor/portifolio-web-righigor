@@ -4,7 +4,7 @@
   gap: 20px;
   padding-top: 20px;
 
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
 }
 .container {
   display: flex;
@@ -68,7 +68,7 @@
     gap: 10px;
     padding-top: 20px;
   
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
   }
 
   .imgCard {
@@ -91,7 +91,7 @@
     gap: 15px;
     padding-top: 20px;
   
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
   }
 
   .imgCard {
@@ -113,9 +113,8 @@
     gap: 20px;
     padding-top: 20px;
   
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
   }
-
 
   .nameCard {
     width: 18rem;
