@@ -5,5 +5,6 @@ export type Projects = {
   description: string,
   tags: string[],
   github_link: string,
+  header: string,
   images: string[]
 };

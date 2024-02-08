@@ -50,6 +50,10 @@
   cursor: pointer;
 }
 
+.pagContainer button:hover {
+  background-color: var(--blue-600);
+}
+
 .pagContainer button:disabled {
   color: rgba(255, 255, 255, 0.255);
   background-color: var(--blue-200);

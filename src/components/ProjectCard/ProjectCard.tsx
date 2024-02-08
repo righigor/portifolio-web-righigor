@@ -15,8 +15,8 @@ function ProjectCard({ content }: ProjectCardProp) {
           <Link to={ `/projects/${project.id}` } key={ i } className={ style.container }>
             <div className={ style.card }>
               <img
-                src={ project.images[0] }
-                alt={ `certificado de ${project.name}` }
+                src={ project.header }
+                alt={ `Capa do ${project.name}` }
                 className={ style.imgCard }
               />
             </div>

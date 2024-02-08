@@ -5,6 +5,7 @@ import twimg4 from './js.png';
 import twimg5 from './css-1.png';
 import twimg6 from './css-2.png';
 import twimg7 from './css-3.png';
+import twheader from './header.png';
 
 export {
   twimg1,
@@ -14,4 +15,5 @@ export {
   twimg5,
   twimg6,
   twimg7,
+  twheader,
 };
