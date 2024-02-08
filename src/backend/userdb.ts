@@ -1,4 +1,4 @@
-import { Skills, User } from '../types/User';
+import { About, Skills, User } from '../types/User';
 import profile from '../images/assets/Foto 3x4.jpg';
 import {
   html, react,
@@ -78,6 +78,14 @@ const skillsArray: Skills[] = [
   },
 ];
 
+const aboutArray: About[] = [
+  {
+    id: 1,
+    title: 'test',
+    description: 'test description',
+  },
+];
+
 export const user: User = {
   id: 1,
   login: 'righigordev@gmail.com',
@@ -85,6 +93,7 @@ export const user: User = {
   name: 'Igor Righi',
   profilePic: profile,
   skills: skillsArray,
+  about: aboutArray,
   contact: {
     linkedin: 'https://www.linkedin.com/in/igor-righi/',
     github: 'https://github.com/righigor',
