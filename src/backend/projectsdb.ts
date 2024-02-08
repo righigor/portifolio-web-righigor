@@ -2,7 +2,7 @@ import { Projects } from '../types/Projects';
 import trybelogo from '../images/trybe-logo.png';
 import { descAppReceitas, descFrontStore, descPasswordManager,
   descTestsReact, descTrybetunes, descTrybewarts, descBlogsApi,
-  descNoteManager } from './description';
+  descNoteManager, descPollsApi } from './description';
 import { twimg1, twimg2, twimg3, twimg4, twimg5,
   twimg6, twimg7, twheader } from './images/trybewarts';
 import { pwimg1, pwimg2, pwimg3, pwimg4, pwheader } from './images/password-manager';
@@ -16,6 +16,8 @@ import { recipeheader } from './images/recipe-app';
 import { noteimg1, noteimg2, noteimg3, noteimg4,
   noteimg5, noteimg6, noteimg7, noteimg8, noteimg9,
   noteheader } from './images/notes-manager';
+import { pollheader, pollimg1, pollimg2, pollimg3, pollimg4,
+  pollimg5, pollimg6, pollimg7, pollimg8 } from './images/poll-api';
 
 export const projects: Projects[] = [
   {
@@ -102,6 +104,17 @@ export const projects: Projects[] = [
   },
   {
     id: 9,
+    name: 'Polls Api',
+    school_id: 2,
+    description: descPollsApi,
+    tags: ['Back-End', 'Prisma', 'TypeScript', 'WebSocket', 'Redis'],
+    github_link: 'https://github.com/righigor/rocketseat/tree/main/nlw-expert/polls-app',
+    header: pollheader,
+    images: [pollimg1, pollimg2, pollimg3, pollimg4, pollimg5, pollimg6, pollimg7,
+      pollimg8],
+  },
+  {
+    id: 10,
     name: 'test',
     description: 'description',
     tags: ['tags', 'Python', 'Back-End'],
