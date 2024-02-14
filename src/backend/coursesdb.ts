@@ -6,12 +6,14 @@ import {
   descCursoJava, tagCursoJava,
   descOOP, tagOOP,
   descIntroML, tagIntroML,
+  descNLW, tagNLW,
 } from './description.ts';
 import certFundWeb from './certificates/fundamentos-desenvolvimento-web.png';
 import certFrontDev from './certificates/desenvolvimento-front-end.png';
 import certJava from './certificates/curso-de-java.png';
 import certIaBoot from './certificates/bootcamp-ia-generativa-aws.png';
 import logoRasp from '../images/Raspberry-Pi-logo.jpg';
+import certNlw from './certificates/nlw-expert-ptbr.png';
 
 export const courses: Courses[] = [
   {
@@ -81,7 +83,22 @@ export const courses: Courses[] = [
       ended_at: '10-2023',
     },
   },
-
+  {
+    id: 7,
+    name: 'NLW Expert trilha de React da Rocketseat',
+    school_id: 2,
+    description: descNLW,
+    tags: tagNLW,
+    certificate: {
+      certificate_number: '09e0b687-2e23-47a3-b1f5-23a681108d95',
+      link: 'https://app.rocketseat.com.br/certificates/09e0b687-2e23-47a3-b1f5-23a681108d95',
+      image: certNlw,
+    },
+    date: {
+      started_at: '02-2024',
+      ended_at: '02-2024',
+    },
+  },
   {
     id: 5,
     name: 'Object-Oriented Programming in Python',

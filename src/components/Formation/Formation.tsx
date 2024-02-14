@@ -20,7 +20,7 @@ function Formation() {
   const [exibition, setExibition] = useState(true);
   const [paginaAtual, setPaginaAtual] = useState(1);
   const [inputFilter, setInputFilter] = useState('');
-  const projetosPorPagina = 6;
+  const itensPerPage = 6;
 
   useEffect(() => {
     window.scrollTo(0, 100);
@@ -46,11 +46,13 @@ function Formation() {
   const handleCourseBtn = () => {
     setContentCourse(courses);
     setFilterCourse(courses);
+    setPaginaAtual(1);
     setExibition(true);
   };
 
   const handleInstitutionsBtn = () => {
     setContentSchool(schools);
+    setPaginaAtual(1);
     setExibition(false);
   };
 
@@ -59,11 +61,11 @@ function Formation() {
     filterData(filterTag);
   };
 
-  const indiceInicial = (paginaAtual - 1) * projetosPorPagina;
-  const indiceFinal = indiceInicial + projetosPorPagina;
-  const projetosDaPagina = filterCourse.slice(indiceInicial, indiceFinal);
-  console.log(projetosDaPagina);
-  const totalPaginas = Math.ceil(filterCourse.length / projetosPorPagina);
+  const indiceInicial = (paginaAtual - 1) * itensPerPage;
+  const indiceFinal = indiceInicial + itensPerPage;
+  const coursesByPage = filterCourse.slice(indiceInicial, indiceFinal);
+  const totalPaginas = Math.ceil(filterCourse.length / itensPerPage);
+  const totalSchoolPages = Math.ceil(contentSchool.length / itensPerPage);
 
   const nextPage = () => {
     if (paginaAtual < totalPaginas) {
@@ -120,7 +122,7 @@ function Formation() {
         ))}
       </div>
       { exibition
-        ? <CourseCard content={ filterCourse } />
+        ? <CourseCard content={ coursesByPage } />
         : <InstitutionCard content={ contentSchool } /> }
       <div className={ style.pagContainer }>
         <button onClick={ prevPage } disabled={ paginaAtual === 1 }>
@@ -131,9 +133,14 @@ function Formation() {
           {' '}
           de
           {' '}
-          {totalPaginas}
+          {exibition ? totalPaginas : totalSchoolPages}
         </span>
-        <button onClick={ nextPage } disabled={ paginaAtual === totalPaginas }>
+        <button
+          onClick={ nextPage }
+          disabled={ exibition
+            ? paginaAtual === totalPaginas
+            : paginaAtual === totalSchoolPages }
+        >
           Próxima
         </button>
       </div>

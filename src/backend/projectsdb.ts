@@ -2,7 +2,7 @@ import { Projects } from '../types/Projects';
 import trybelogo from '../images/trybe-logo.png';
 import { descAppReceitas, descFrontStore, descPasswordManager,
   descTestsReact, descTrybetunes, descTrybewarts, descBlogsApi,
-  descNoteManager, descPollsApi } from './description';
+  descNoteManager, descPollsApi, descDeliveryApp } from './description';
 import { twimg1, twimg2, twimg3, twimg4, twimg5,
   twimg6, twimg7, twheader } from './images/trybewarts';
 import { pwimg1, pwimg2, pwimg3, pwimg4, pwheader } from './images/password-manager';
@@ -119,7 +119,7 @@ export const projects: Projects[] = [
     id: 10,
     name: 'Delivery App',
     school_id: 2,
-    description: 'Delivery App',
+    description: descDeliveryApp,
     tags: ['Mobile', 'Tailwind', 'ExpoGo', 'ReactNative', 'TypeScript'],
     github_link: 'https://github.com/righigor/rocketseat/tree/main/nlw-expert/delivery-app',
     header: headerdelivery,
