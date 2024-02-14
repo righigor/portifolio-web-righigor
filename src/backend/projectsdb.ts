@@ -18,6 +18,8 @@ import { noteimg1, noteimg2, noteimg3, noteimg4,
   noteheader } from './images/notes-manager';
 import { pollheader, pollimg1, pollimg2, pollimg3, pollimg4,
   pollimg5, pollimg6, pollimg7, pollimg8 } from './images/poll-api';
+import { headerdelivery, deliveryimg1, deliveryimg2, deliveryimg3,
+  deliveryimg4, deliveryimg5 } from './images/delivery-app';
 
 export const projects: Projects[] = [
   {
@@ -115,6 +117,16 @@ export const projects: Projects[] = [
   },
   {
     id: 10,
+    name: 'Delivery App',
+    school_id: 2,
+    description: 'Delivery App',
+    tags: ['Mobile', 'Tailwind', 'ExpoGo', 'ReactNative', 'TypeScript'],
+    github_link: 'https://github.com/righigor/rocketseat/tree/main/nlw-expert/delivery-app',
+    header: headerdelivery,
+    images: [deliveryimg1, deliveryimg2, deliveryimg3, deliveryimg4, deliveryimg5],
+  },
+  {
+    id: 11,
     name: 'test',
     description: 'description',
     tags: ['tags', 'Python', 'Back-End'],
