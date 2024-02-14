@@ -114,3 +114,22 @@
   color: rgba(255, 255, 255, 0.255);
   background-color: var(--blue-200);
 }
+
+@media only screen and (max-width: 480px) {
+  .filterContainer {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+  .filterContainer button {
+    padding: 16px 32px;
+    margin-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .filterContainer {
+    display: flex;
+    overflow-x: auto;
+  }
+
+}

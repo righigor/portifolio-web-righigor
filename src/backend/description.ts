@@ -24,6 +24,10 @@ export const descIntroML = 'Descubra os fundamentos do Machine Learning, como el
 
 export const tagIntroML = ['Machine Learning', 'IA'];
 
+export const descNLW = 'NLW Expert, aconteceu entre 05 e 09 de Fevereiro de 2024. O bootcamp teve uma carga horária de 5 horas e incluiu aulas sobre a criação de uma aplicação Front-End, que gerencia notas tipo post-it, aplicando conceitos de Propriedades, Estados e Componentes, TypeScript, tooling com Vite, interface responsiva com TailwindCSS, uso de APIs da Web como Web Storage e Web Speech.';
+
+export const tagNLW = ['Front-End', 'Tailwind', 'React.JS', 'TypeScript'];
+
 export const descTrybewarts = 'Criação de um fomulário em HTML, CSS Flexboxe JavaScript. Simula um site de inscrição da escola Trybewarts com um sistema de verificação basico de login. Projeto realizado durante o curso de Fundamento Web na ';
 
 export const descPasswordManager = 'Nesse projeto vou desenvolver uma aplicação em React para gerenciar senhas. Nele, irei implementar um formulário para cadastrar as informações de acesso de serviços que eu uso na internet. Por exemplo, será possível cadastrar os dados de login e senha utilizados para acessar o provedor de e-mails que utilizo diariamente. Deverá ser possível adicionar os dados de vários serviços diferentes. Além disso, vou implementar uma funcionalidade para esconder/mostrar todas as senhas cadastradas. O formulário deverá ser renderizado de forma condicional. Ou seja, ele apenas será renderizado após a pessoa usuária clicar no botão para adicionar uma nova senha. Projeto realizado durante o curso de Desenvolvimento Front-End na ';
@@ -41,3 +45,5 @@ export const descBlogsApi = 'Neste projeto criarei uma API e um banco de dados p
 export const descNoteManager = 'Neste projeto criei um gerenciador de notas, no qual, poderá ser adicionado pelo usuário notas através de sua voz, por meio da SpeechRecognitionApi do browser do usuário, ou também digitando-as. A estilização do projeto foi feita completamente por meio do Tailwind e é uma aplicação completamente responsiva. Projeto realizado durante a semana do NLW Expert, um bootcamp realizado pela ';
 
 export const descPollsApi = 'Este projeto consiste em API que gerencia enquentes. Na qual o usuário pode cadastrar enquetes, dando título e a opções de votação, votar em uma opção apenas uma vez, ter acesso a votação atravéz de um GET que retorna a enquete junto com o número de votos de opção. Além disso o usuário entrando na rota /results tem acesso em tempo real o número de votos de cada opção. Projeto feito em TypeScript, utilizando o ORM Prisma em conjunto com o Redis para fazer conexões via WebScocket. Projeto realizado durante a semana do NLW Expert, um bootcamp realizado pela ';
+
+export const descDeliveryApp = 'Um app de delivery, feito em ReactNative, onde o usuário pode adicionar os itens, que estão categorizados, em seu carrinho. No carrinho o usuário tem acesso ao valor total da compra e também pode excluir um algum item se desejar, além disso há um input onde o usuário informa seu endereço, que é necessário para efetuar o pedido que quando clicado, é gerada uma mensagem com todos os dados do pedido e é enviado automáticamente do usuário para o estabelecimento via WhatsApp. Projeto realizado durante a semana do NLW Expert, um bootcamp realizado pela ';

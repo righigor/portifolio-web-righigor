@@ -45,10 +45,6 @@
   gap: 1rem;
 }
 
-/* .img img {
-  width: 25rem;
-} */
-
 .linkGit {
   display: flex;
   justify-content: center;
@@ -78,7 +74,7 @@
 .carrossel {
   position: relative;
   width: 100%;
-  max-width: 50rem; /* Ajuste conforme necessário */
+  max-width: 50rem;
   height: 30rem;
   margin: auto;
   overflow: hidden;
@@ -91,7 +87,7 @@
 
 .carrossel img {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
   transition: opacity 0.5s ease-in-out;
 }
 

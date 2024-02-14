@@ -6,7 +6,7 @@ import style from './ProjectsRender.module.css';
 import { Projects } from '../../types/Projects';
 
 // eslint-disable-next-line max-len
-const tagSearchBar = ['All', 'Front-End', 'JavaScript', 'CSS', 'Back-End', 'Python'];
+const tagSearchBar = ['All', 'Front-End', 'JavaScript', 'CSS', 'Back-End', 'Python', 'ReactNative'];
 
 function ProjectsRender() {
   const [projectContent] = useState(projects);
