@@ -6,6 +6,7 @@ import style from './Home.module.css';
 import git from '../../icons/github-white-logo.svg';
 import { user } from '../../backend/userdb';
 import TopProjects from '../../components/TopProjects/TopProjects';
+import AboutHome from '../../components/AboutHome/AboutHome';
 
 function Home() {
   const [textoVisivel, setTextoVisivel] = useState('');
@@ -58,6 +59,8 @@ function Home() {
           />
         </div>
       </div>
+
+      <AboutHome />
 
       <TopProjects />
     </div>

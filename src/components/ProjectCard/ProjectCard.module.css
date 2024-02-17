@@ -52,8 +52,6 @@
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: 10px;
     padding-top: 20px;
-  
-    margin-bottom: 2rem;
   }
 
   .imgCard {
@@ -75,8 +73,6 @@
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
     gap: 15px;
     padding-top: 20px;
-  
-    margin-bottom: 10rem;
   }
 
   .imgCard {
@@ -89,21 +85,5 @@
     font-size: 1.1rem;
     text-align: center;
     color: white;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1280px) {
-  .cardContainer {
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-    gap: 20px;
-    padding-top: 20px;
-  
-    margin-bottom: 2rem;
-  }
-
-
-  .nameCard {
-    width: 18rem;
-    font-size: 1.3rem;
   }
 }

@@ -1,4 +1,5 @@
 import { Courses } from '../types/Courses';
+import harvadLogo from '../images/harvard-logo.jpg';
 import {
   descFundWeb, tagFundWeb,
   descDevFront, tagDevFront,
@@ -6,7 +7,7 @@ import {
   descCursoJava, tagCursoJava,
   descOOP, tagOOP,
   descIntroML, tagIntroML,
-  descNLW, tagNLW,
+  descNLW, tagNLW, desctCs50, tagCs50,
 } from './description.ts';
 import certFundWeb from './certificates/fundamentos-desenvolvimento-web.png';
 import certFrontDev from './certificates/desenvolvimento-front-end.png';
@@ -64,6 +65,23 @@ export const courses: Courses[] = [
     date: {
       started_at: '12-2023',
       ended_at: '12-2023',
+    },
+  },
+
+  {
+    id: 8,
+    name: 'CS50: Introduction to Computer Science',
+    school_id: 4,
+    description: desctCs50,
+    tags: tagCs50,
+    certificate: {
+      certificate_number: '',
+      link: '',
+      image: harvadLogo,
+    },
+    date: {
+      started_at: '12-2023',
+      ended_at: '02-2024',
     },
   },
 
