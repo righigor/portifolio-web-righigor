@@ -3,6 +3,7 @@ import { Schools } from '../types/Schools';
 import trybeLogo from '../images/trybe-logo.png';
 import rocketseatLogo from '../images/rocketseat-logo.png';
 import raspLogo from '../images/Raspberry-Pi-logo.jpg';
+import harvardLogo from '../images/harvard-logo.jpg';
 
 export const schools: Schools[] = [
   {
@@ -24,5 +25,12 @@ export const schools: Schools[] = [
     name: 'Raspberry PI Foundation',
     description: 'A Raspberry Pi Foundation, é uma organização sem fins lucrativos fundada em 2009 na Inglaterra para estimular o estudo básico de ciência da computação nas escolas, e é responsável pelo desenvolvimento de um computador de placa única chamado Raspberry Pi.',
     image: raspLogo,
+  },
+
+  {
+    id: 4,
+    name: 'Harvard University',
+    description: 'A Escola de Engenharia e Ciências Aplicadas Harvard John A. Paulson (SEAS) é a escola de engenharia da Faculdade de Artes e Ciências da Universidade de Harvard, oferecendo cursos em engenharia e ciências aplicadas para alunos de pós-graduação admitidos diretamente no SEAS e para alunos de graduação admitidos primeiro em Harvard. Faculdade. Anteriormente, a Lawrence Scientific School e depois a Divisão de Engenharia e Ciências Aplicadas.',
+    image: harvardLogo,
   },
 ];

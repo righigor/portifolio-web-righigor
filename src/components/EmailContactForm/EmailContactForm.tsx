@@ -6,6 +6,7 @@ import style from './EmailContactForm.module.css';
 function EmailContactForm() {
   const [dataForm, setDataForm] = useState({
     name: '',
+    wpp: '',
     email: '',
     message: '',
   });
@@ -29,12 +30,13 @@ function EmailContactForm() {
         console.log('msg enviada');
         setDataForm({
           name: '',
+          wpp: '',
           email: '',
           message: '',
         });
         Swal.fire({
           title: 'Mensagem Enviada com sucesso!',
-          text: 'Entrarei em contato via email informado',
+          text: 'Entrarei em contato via email/whatsapp informado!',
           icon: 'success',
         });
       } else {
@@ -58,8 +60,20 @@ function EmailContactForm() {
             name="name"
             value={ dataForm.name }
             onChange={ handleChange }
-            placeholder="Nome"
+            placeholder="Seu nome"
             id="name"
+            className={ style.inputArea }
+          />
+        </label>
+        <br />
+        <label>
+          <input
+            type="text"
+            name="wpp"
+            value={ dataForm.wpp }
+            onChange={ handleChange }
+            placeholder="Seu whatsApp"
+            id="wpp"
             className={ style.inputArea }
           />
         </label>
@@ -70,7 +84,7 @@ function EmailContactForm() {
             name="email"
             value={ dataForm.email }
             onChange={ handleChange }
-            placeholder="E-mail"
+            placeholder="Seu e-mail"
             id="email"
             className={ style.inputArea }
           />
