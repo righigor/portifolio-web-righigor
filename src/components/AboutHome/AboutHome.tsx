@@ -1,5 +1,3 @@
-/* eslint-disable max-len */
-import { differenceInYears } from 'date-fns';
 import { handleBtnDownload } from '../../utils/handleBtnDownload';
 import style from './AboutHome.module.css';
 import aboutPic from '../../images/about-capa.jpeg';
@@ -8,14 +6,15 @@ import resumeLogo from '../../icons/resume-icon.svg';
 import { user } from '../../backend/userdb';
 
 function AboutHome() {
-  const birthDate = new Date('1999-09-13');
-  const age = differenceInYears(new Date(), birthDate);
-
   return (
     <div className={ style.divContainer }>
       <div className={ style.aboutContainer }>
         <div className={ style.imgContainer }>
-          <img src={ aboutPic } alt="Imagem de um Programador usando um computador Gerada por IA" width="80%" />
+          <img
+            src={ aboutPic }
+            alt="Imagem de um Programador usando um computador Gerada por IA"
+            width="80%"
+          />
         </div>
         <div className={ style.descContainer }>
           <div className={ style.skillsContainer }>
