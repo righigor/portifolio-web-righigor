@@ -4,7 +4,7 @@ export type User = {
   password: string,
   name: string,
   profilePic: string,
-  about: About[]
+  about: string,
   skills: Skills[],
   contact: {
     linkedin: string,
@@ -19,10 +19,4 @@ export type Skills = {
   id: number,
   skill: string,
   icon: string,
-};
-
-export type About = {
-  id: number,
-  title: string,
-  description: string,
 };
