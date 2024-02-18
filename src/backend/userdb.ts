@@ -1,4 +1,6 @@
-import { About, Skills, User } from '../types/User';
+/* eslint-disable max-len */
+import { differenceInYears } from 'date-fns';
+import { Skills, User } from '../types/User';
 import profile from '../images/assets/Foto 3x4.jpg';
 import {
   html, react,
@@ -78,13 +80,10 @@ const skillsArray: Skills[] = [
   },
 ];
 
-const aboutArray: About[] = [
-  {
-    id: 1,
-    title: 'test',
-    description: 'test description',
-  },
-];
+const birthDate = new Date('1999-09-13');
+const age = differenceInYears(new Date(), birthDate);
+
+const descAbout = `Olá! Meu nome é Igor Righi, tenho ${age} anos, sou estudante de desenvolvimento web na Trybe, onde venho aprendendo habilidades em programação e construção de projetos web. Estou entusiasmado em aplicar meu conhecimento e criatividade para enfrentar desafios e desenvolver soluções inovadoras. Sou dedicado, autodidata e estou sempre em busca de aprender e evoluir. Além dos meus estudos, gosto de futebol e torço para o Cruzeiro e de jogar jogos, como Hearthstone. Estou ansioso para contribuir e crescer na área de desenvolvimento web!`;
 
 export const user: User = {
   id: 1,
@@ -93,7 +92,7 @@ export const user: User = {
   name: 'Igor Righi',
   profilePic: profile,
   skills: skillsArray,
-  about: aboutArray,
+  about: descAbout,
   contact: {
     linkedin: 'https://www.linkedin.com/in/igor-righi/',
     github: 'https://github.com/righigor',

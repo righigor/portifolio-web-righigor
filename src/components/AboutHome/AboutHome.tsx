@@ -1,16 +1,20 @@
-/* eslint-disable max-len */
 import { handleBtnDownload } from '../../utils/handleBtnDownload';
 import style from './AboutHome.module.css';
-import trybe from '../../images/about-capa.jpeg';
+import aboutPic from '../../images/about-capa.jpeg';
 import { react, ts, css, python, docker, sql } from '../../icons/skills';
 import resumeLogo from '../../icons/resume-icon.svg';
+import { user } from '../../backend/userdb';
 
 function AboutHome() {
   return (
     <div className={ style.divContainer }>
       <div className={ style.aboutContainer }>
         <div className={ style.imgContainer }>
-          <img src={ trybe } alt="Imagem de um Programador usando um computador Gerada por IA" width="80%" />
+          <img
+            src={ aboutPic }
+            alt="Imagem de um Programador usando um computador Gerada por IA"
+            width="80%"
+          />
         </div>
         <div className={ style.descContainer }>
           <div className={ style.skillsContainer }>
@@ -23,7 +27,9 @@ function AboutHome() {
           </div>
           <h2 className={ style.title }>Sobre mim</h2>
           <h4 className={ style.subtitle }>Sou um desenvolvedor Full-Stack</h4>
-          <span className={ style.desc }>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet officia fugit reprehenderit, quaerat dicta similique suscipit exercitationem est eum ratione ex! Fugiat et perferendis doloribus modi ex animi, totam rem?</span>
+          <span className={ style.desc }>
+            {user.about}
+          </span>
 
           <button
             title="Faça download do meu currículo"

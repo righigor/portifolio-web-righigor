@@ -46,12 +46,6 @@ function DropMenu() {
               <span>Início</span>
             </Link>
             <div className={ style.linkbottom } />
-            <Link to="about-me" className={ style.linkStyle } onClick={ closeMenuLink }>
-              <span>
-                Sobre Mim
-              </span>
-            </Link>
-            <div className={ style.linkbottom } />
             <Link to="skills" className={ style.linkStyle } onClick={ closeMenuLink }>
               <span>Habilidades</span>
             </Link>
