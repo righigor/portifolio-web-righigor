@@ -128,13 +128,4 @@ export const projects: Projects[] = [
     header: headerdelivery,
     images: [deliveryimg1, deliveryimg2, deliveryimg3, deliveryimg4, deliveryimg5],
   },
-  {
-    id: 11,
-    name: 'test',
-    description: 'description',
-    tags: ['tags', 'Python', 'Back-End'],
-    github_link: 'link',
-    header: '',
-    images: ['img'],
-  },
 ];

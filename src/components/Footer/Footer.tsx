@@ -28,12 +28,6 @@ function Footer() {
       </div>
 
       <div className={ style.linksContainer }>
-        <Link to="about-me" className={ style.linkStyle }>
-          <span>
-            Sobre Mim
-          </span>
-        </Link>
-
         <Link to="skills" className={ style.linkStyle }>
           <span>Habilidades</span>
         </Link>

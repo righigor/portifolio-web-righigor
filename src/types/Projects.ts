@@ -1,5 +1,5 @@
 export type Projects = {
-  id: number,
+  id: number | string,
   name: string,
   school_id?: number,
   description: string,

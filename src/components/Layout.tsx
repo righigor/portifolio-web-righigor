@@ -5,13 +5,12 @@ import QuickContact from './QuickContact/QuickContact';
 
 function Layout() {
   const location = useLocation();
-  const isTrue = location.pathname !== '/contact';
+  const isTrue = location.pathname !== '/contact' && location.pathname !== '/updatedb';
   return (
     <>
       <Header />
       <Outlet />
       {isTrue && <QuickContact />}
-      {/* <QuickContact /> */}
       <Footer />
     </>
   );

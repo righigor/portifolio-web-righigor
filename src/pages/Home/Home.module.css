@@ -34,6 +34,10 @@
   animation: aparecer 2s ease 3s forwards;
 }
 
+.pic {
+  max-height: 25rem;
+}
+
 @keyframes aparecer {
   from {
     opacity: 0;

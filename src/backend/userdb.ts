@@ -9,7 +9,7 @@ import {
   css, front,
   back, python,
   docker, sql,
-  poo,
+  poo, tailwind,
 } from '../icons/skills';
 
 const skillsArray: Skills[] = [
@@ -27,6 +27,11 @@ const skillsArray: Skills[] = [
     id: 3,
     skill: 'JavaScript',
     icon: js,
+  },
+  {
+    id: 13,
+    skill: 'Tailwind CSS',
+    icon: tailwind,
   },
   {
     id: 4,
@@ -98,6 +103,6 @@ export const user: User = {
     github: 'https://github.com/righigor',
     instagram: 'https://www.instagram.com/righigor/',
     email: 'righigordev@gmail.com',
-    wpp: 'https://wa.me/5531998397442/?text=Olá%20Igor%20Righi',
+    wpp: 'https://wa.me/5531998397442/?text=Olá%20Igor%20Righi,%20tudo%20bem?',
   },
 };

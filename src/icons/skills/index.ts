@@ -11,6 +11,7 @@ import redux from './redux-logo.png';
 import ts from './ts-logo.png';
 import sql from './sql-logo.png';
 import poo from './poo-logo.png';
+import tailwind from './tailwind-logo.svg';
 
 export {
   back,
@@ -26,4 +27,5 @@ export {
   ts,
   sql,
   poo,
+  tailwind,
 };
