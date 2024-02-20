@@ -111,16 +111,21 @@ function Formation() {
           Instituições
         </button>
       </div>
-      <div className={ style.filterContainer }>
-        {tagSearchBar.map((tag, i) => (
-          <button
-            key={ i }
-            onClick={ () => handleTagFilter(tag) }
-          >
-            { tag }
-          </button>
-        ))}
-      </div>
+
+      {
+        exibition ? (
+          <div className={ style.filterContainer }>
+            {tagSearchBar.map((tag, i) => (
+              <button
+                key={ i }
+                onClick={ () => handleTagFilter(tag) }
+              >
+                { tag }
+              </button>
+            ))}
+          </div>
+        ) : ''
+      }
       { exibition
         ? <CourseCard content={ coursesByPage } />
         : <InstitutionCard content={ contentSchool } /> }

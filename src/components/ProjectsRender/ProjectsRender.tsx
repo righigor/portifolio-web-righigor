@@ -13,13 +13,18 @@ function ProjectsRender() {
   const [filterProject, setFilterProject] = useState<Projects[]>(projects);
   const [filterTag, setFilterTag] = useState<string>('All');
   const [paginaAtual, setPaginaAtual] = useState(1);
-  const projetosPorPagina = 6;
+  const itensPerPage = 6;
 
   useEffect(() => {
     window.scrollTo(0, 100);
   }, [paginaAtual]);
 
+  useEffect(() => {
+    filterData(filterTag);
+  }, [filterTag]);
+
   const filterData = (tag: string) => {
+    setPaginaAtual(1);
     const data = projectContent.filter((c) => c.tags.includes(tag));
     setFilterProject(data);
     if (tag === 'All') {
@@ -32,11 +37,10 @@ function ProjectsRender() {
     filterData(filterTag);
   };
 
-  const indiceInicial = (paginaAtual - 1) * projetosPorPagina;
-  const indiceFinal = indiceInicial + projetosPorPagina;
-  const projetosDaPagina = filterProject.slice(indiceInicial, indiceFinal);
-
-  const totalPaginas = Math.ceil(filterProject.length / projetosPorPagina);
+  const indiceInicial = (paginaAtual - 1) * itensPerPage;
+  const indiceFinal = indiceInicial + itensPerPage;
+  const projectsByPage = filterProject.slice(indiceInicial, indiceFinal);
+  const totalPaginas = Math.ceil(filterProject.length / itensPerPage);
 
   const nextPage = () => {
     if (paginaAtual < totalPaginas) {
@@ -66,7 +70,7 @@ function ProjectsRender() {
           </button>
         ))}
       </div>
-      <ProjectCard content={ projetosDaPagina } />
+      <ProjectCard content={ projectsByPage } />
       <div className={ style.pagContainer }>
         <button onClick={ prevPage } disabled={ paginaAtual === 1 }>
           Anterior
@@ -78,7 +82,10 @@ function ProjectsRender() {
           {' '}
           {totalPaginas}
         </span>
-        <button onClick={ nextPage } disabled={ paginaAtual === totalPaginas }>
+        <button
+          onClick={ nextPage }
+          disabled={ paginaAtual === totalPaginas || totalPaginas === 0 }
+        >
           Próxima
         </button>
       </div>
