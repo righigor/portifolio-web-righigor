@@ -117,18 +117,24 @@
 
 @media only screen and (max-width: 480px) {
   .searchBar {
-
     width: 80%;
     margin: 0 10% 1.5rem 10%;
   }
   .filterContainer {
     flex-wrap: nowrap;
     overflow-x: auto;
-    padding-left: 38rem;
+  }
+  .filterContainer button:first-child {
+    margin-left: 52rem;
   }
   .filterContainer button {
-    min-width: 9rem;
-    margin-right: 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 8rem;
+    margin-right: 0.5rem;
+  }
+  .filterContainer button:last-child {
+    margin-right: 0;
   }
 }
 
