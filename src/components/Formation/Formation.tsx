@@ -9,6 +9,7 @@ import CourseCard from '../CourseCard/CourseCard';
 import style from './Formation.module.css';
 import lupa from '../../icons/lupa-icon.svg';
 import InstitutionCard from '../InstitutionCard/InstitutionCard.tsx';
+import { usePageContext } from '../../provider/pageProvider.tsx';
 
 const tagSearchBar = ['All', 'Front-End', 'JavaScript', 'Back-End', 'IA', 'Python', 'Machine Learning'];
 
@@ -18,13 +19,13 @@ function Formation() {
   const [filterTag, setFilterTag] = useState<string>('All');
   const [contentSchool, setContentSchool] = useState<Schools[]>(schools);
   const [exibition, setExibition] = useState(true);
-  const [paginaAtual, setPaginaAtual] = useState(1);
   const [inputFilter, setInputFilter] = useState('');
+  const { paginaAtualCourses, setPaginaAtualCourses } = usePageContext();
   const itensPerPage = 6;
 
   useEffect(() => {
     window.scrollTo(0, 100);
-  }, [paginaAtual]);
+  }, [paginaAtualCourses]);
 
   const filterData = (tag: string) => {
     const data = contentCourse.filter((c) => c.tags.includes(tag));
@@ -46,36 +47,37 @@ function Formation() {
   const handleCourseBtn = () => {
     setContentCourse(courses);
     setFilterCourse(courses);
-    setPaginaAtual(1);
+    setPaginaAtualCourses(1);
     setExibition(true);
   };
 
   const handleInstitutionsBtn = () => {
     setContentSchool(schools);
-    setPaginaAtual(1);
+    setPaginaAtualCourses(1);
     setExibition(false);
   };
 
   const handleTagFilter = (tag: string) => {
     setFilterTag(tag);
     filterData(filterTag);
+    setPaginaAtualCourses(1);
   };
 
-  const indiceInicial = (paginaAtual - 1) * itensPerPage;
+  const indiceInicial = (paginaAtualCourses - 1) * itensPerPage;
   const indiceFinal = indiceInicial + itensPerPage;
   const coursesByPage = filterCourse.slice(indiceInicial, indiceFinal);
   const totalPaginas = Math.ceil(filterCourse.length / itensPerPage);
   const totalSchoolPages = Math.ceil(contentSchool.length / itensPerPage);
 
   const nextPage = () => {
-    if (paginaAtual < totalPaginas) {
-      setPaginaAtual(paginaAtual + 1);
+    if (paginaAtualCourses < totalPaginas) {
+      setPaginaAtualCourses(paginaAtualCourses + 1);
     }
   };
 
   const prevPage = () => {
-    if (paginaAtual > 1) {
-      setPaginaAtual(paginaAtual - 1);
+    if (paginaAtualCourses > 1) {
+      setPaginaAtualCourses(paginaAtualCourses - 1);
     }
   };
 
@@ -130,11 +132,11 @@ function Formation() {
         ? <CourseCard content={ coursesByPage } />
         : <InstitutionCard content={ contentSchool } /> }
       <div className={ style.pagContainer }>
-        <button onClick={ prevPage } disabled={ paginaAtual === 1 }>
+        <button onClick={ prevPage } disabled={ paginaAtualCourses === 1 }>
           Anterior
         </button>
         <span>
-          {paginaAtual}
+          {paginaAtualCourses}
           {' '}
           de
           {' '}
@@ -143,8 +145,8 @@ function Formation() {
         <button
           onClick={ nextPage }
           disabled={ exibition
-            ? paginaAtual === totalPaginas
-            : paginaAtual === totalSchoolPages }
+            ? paginaAtualCourses === totalPaginas
+            : paginaAtualCourses === totalSchoolPages }
         >
           Próxima
         </button>

@@ -5,12 +5,16 @@ import style from './DropMenu.module.css';
 import curriculo from '../../resume/igor-righi-curriculo.pdf';
 import hamMenu from '../../icons/hamburguer-menu.svg';
 import closeMenu from '../../icons/close-menu.svg';
+import { usePageContext } from '../../provider/pageProvider';
 
 function DropMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const { setPaginaAtualProjects, setPaginaAtualCourses } = usePageContext();
 
   const closeMenuLink = () => {
     setIsOpen(false);
+    setPaginaAtualCourses(1);
+    setPaginaAtualProjects(1);
   };
 
   const handleBtnDownload = () => {
