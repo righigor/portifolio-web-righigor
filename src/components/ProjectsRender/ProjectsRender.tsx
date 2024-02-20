@@ -9,7 +9,7 @@ import { Projects } from '../../types/Projects';
 const tagSearchBar = ['All', 'Front-End', 'JavaScript', 'CSS', 'Back-End', 'Python', 'ReactNative'];
 
 function ProjectsRender() {
-  const [projectContent] = useState(projects);
+  const [projectContent] = useState<Projects[]>(projects);
   const [filterProject, setFilterProject] = useState<Projects[]>(projects);
   const [filterTag, setFilterTag] = useState<string>('All');
   const [paginaAtual, setPaginaAtual] = useState(1);
