@@ -5,6 +5,8 @@ interface PageContextType {
   setPaginaAtualProjects: React.Dispatch<React.SetStateAction<number>>,
   paginaAtualCourses: number,
   setPaginaAtualCourses: React.Dispatch<React.SetStateAction<number>>,
+  exibition: boolean,
+  setExibition: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const PageContext = createContext<PageContextType | undefined>(undefined);
@@ -20,12 +22,15 @@ export const usePageContext = () => {
 export function PageProvider({ children }: any) {
   const [paginaAtualProjects, setPaginaAtualProjects] = useState(1);
   const [paginaAtualCourses, setPaginaAtualCourses] = useState(1);
+  const [exibition, setExibition] = useState(true);
 
   const contextValue = {
     paginaAtualProjects,
     setPaginaAtualProjects,
     paginaAtualCourses,
     setPaginaAtualCourses,
+    exibition,
+    setExibition,
   };
 
   return (

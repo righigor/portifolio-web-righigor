@@ -7,6 +7,7 @@ import CourseCard from '../../components/CourseCard/CourseCard';
 import { schools } from '../../backend/schoolsdb';
 import { Schools } from '../../types/Schools';
 import style from './Institutions.module.css';
+import NotfoundItem from '../../components/NotfoundItem/NotfoundItem';
 
 function Institutions() {
   const schoolMock: Schools = {
@@ -41,6 +42,16 @@ function Institutions() {
     filterSchool();
     setLoading(true);
   }, [contentCourse]);
+
+  if (!school) {
+    return (
+      <NotfoundItem
+        title="Instituição não encontrada"
+        link="/education"
+        btn="Voltar para Instituições"
+      />
+    );
+  }
 
   return (
     <div className={ style.container }>

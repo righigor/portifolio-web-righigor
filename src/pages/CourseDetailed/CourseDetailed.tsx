@@ -6,6 +6,7 @@ import { Courses } from '../../types/Courses';
 import { schools } from '../../backend/schoolsdb';
 import { Schools } from '../../types/Schools';
 import style from './CourseDetailed.module.css';
+import NotfoundItem from '../../components/NotfoundItem/NotfoundItem';
 
 function CourseDetailed() {
   const { id } = useParams();
@@ -22,6 +23,16 @@ function CourseDetailed() {
     const getSchool = schools.find((s) => s.id === course?.school_id);
     setSchool(getSchool);
   }, [course, id]);
+
+  if (!course) {
+    return (
+      <NotfoundItem
+        title="Curso não encontrado."
+        link="/education"
+        btn="Voltar para Cursos"
+      />
+    );
+  }
 
   return (
     <div className={ style.container }>

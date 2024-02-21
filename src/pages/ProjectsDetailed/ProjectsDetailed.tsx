@@ -11,14 +11,13 @@ import { schools } from '../../backend/schoolsdb';
 import { Projects } from '../../types/Projects';
 import { Schools } from '../../types/Schools';
 import githubLogo from '../../icons/github-white-logo.svg';
+import NotfoundItem from '../../components/NotfoundItem/NotfoundItem';
 
 function ProjectsDetailed() {
   const { id } = useParams();
   const [project, setProject] = useState<Projects>();
   const [school, setSchool] = useState<Schools>();
   const [imgIndex, setImgIndex] = useState(0);
-  const [maxLength, setMaxLength] = useState(0);
-  console.log(maxLength);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -28,9 +27,6 @@ function ProjectsDetailed() {
     setProject(getProject);
     const getSchool = schools.find((s) => s.id === project?.school_id);
     setSchool(getSchool);
-    if (project !== undefined) {
-      setMaxLength(project.images.length);
-    }
   }, [projects, id, school, project]);
 
   const nextImg = () => {
@@ -48,7 +44,7 @@ function ProjectsDetailed() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       nextImg();
-    }, 6000); // Troque o valor para ajustar o intervalo de mudança de imagem (em milissegundos)
+    }, 6000);
 
     return () => {
       clearInterval(intervalId);
@@ -60,7 +56,9 @@ function ProjectsDetailed() {
   }, []);
 
   if (!project) {
-    return <p>Projeto não encontrado</p>;
+    return (
+      <NotfoundItem title="Projeto não encontrado." link="/projects" btn="Voltar para Projetos" />
+    );
   }
 
   return (
@@ -97,7 +95,7 @@ function ProjectsDetailed() {
           <p>
             { project?.description}
             { school
-              ? <a className={ style.linkSchool } href={ `/institutions/${school?.id}` }>{ `${school?.name}.` }</a>
+              ? <Link className={ style.linkSchool } to={ `/institutions/${school?.id}` }>{ `${school?.name}.` }</Link>
               : undefined}
           </p>
         </div>

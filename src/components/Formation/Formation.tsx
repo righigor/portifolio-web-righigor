@@ -18,9 +18,8 @@ function Formation() {
   const [filterCourse, setFilterCourse] = useState<Courses[]>(courses);
   const [filterTag, setFilterTag] = useState<string>('All');
   const [contentSchool, setContentSchool] = useState<Schools[]>(schools);
-  const [exibition, setExibition] = useState(true);
   const [inputFilter, setInputFilter] = useState('');
-  const { paginaAtualCourses, setPaginaAtualCourses } = usePageContext();
+  const { paginaAtualCourses, setPaginaAtualCourses, exibition, setExibition } = usePageContext();
   const itensPerPage = 6;
 
   useEffect(() => {

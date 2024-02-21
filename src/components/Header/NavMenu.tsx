@@ -4,12 +4,20 @@ import curriculo from '../../resume/igor-righi-curriculo.pdf';
 import { usePageContext } from '../../provider/pageProvider';
 
 function NavMenu() {
-  const { setPaginaAtualProjects, setPaginaAtualCourses } = usePageContext();
+  const { setPaginaAtualProjects,
+    setPaginaAtualCourses, setExibition } = usePageContext();
+
   const handleBtnDownload = () => {
     const link = document.createElement('a');
     link.href = curriculo;
     link.download = 'curriculo-igor-righi';
     link.click();
+  };
+
+  const handleClick = () => {
+    setPaginaAtualCourses(1);
+    setPaginaAtualProjects(1);
+    setExibition(true);
   };
 
   return (
@@ -25,7 +33,7 @@ function NavMenu() {
         <Link
           to="projects"
           className={ style.linkStyle }
-          onClick={ () => setPaginaAtualProjects(1) }
+          onClick={ handleClick }
         >
           <span>Projetos</span>
         </Link>
@@ -33,7 +41,7 @@ function NavMenu() {
         <Link
           to="education"
           className={ style.linkStyle }
-          onClick={ () => setPaginaAtualCourses(1) }
+          onClick={ handleClick }
         >
           <span>Formação</span>
         </Link>
