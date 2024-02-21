@@ -41,8 +41,10 @@ function OtherContacts() {
           </a>
         </li>
         <li className={ style.emailLink }>
-          <img src={ email } alt="" />
-          <p>{ user.contact.email }</p>
+          <a href={ `mailto:${user.contact.email}` } className={ style.mailtoLink }>
+            <img src={ email } alt="" />
+            <p>{ user.contact.email }</p>
+          </a>
           <button
             onClick={ handleClick }
             className={ style.btnCopy }

@@ -12,7 +12,8 @@ import { blogimg1, blogimg2, blogimg3, blogimg4, blogimg5,
 import { tunesheader } from './images/trybetunes';
 import { rtlheader } from './images/tests-react';
 import { storeheader } from './images/front-on-store';
-import { recipeheader } from './images/recipe-app';
+import { recipeheader, recipe1, recipe10, recipe11, recipe2, recipe3,
+  recipe4, recipe5, recipe6, recipe7, recipe8, recipe9 } from './images/recipe-app';
 import { noteimg1, noteimg2, noteimg3, noteimg4,
   noteimg5, noteimg6, noteimg7, noteimg8, noteimg9,
   noteheader } from './images/notes-manager';
@@ -81,7 +82,8 @@ export const projects: Projects[] = [
     tags: ['Front-End', 'React', 'TypeScript', 'API'],
     github_link: 'https://github.com/righigor/trybe-exercicios/tree/main/02-Front-End/Secao08-Projeto-App-de-Receitas/Dia01-Projeto-App-de-Receitas',
     header: recipeheader,
-    images: [trybelogo],
+    images: [recipe1, recipe2, recipe3, recipe4, recipe5, recipe6, recipe7, recipe8,
+      recipe9, recipe10, recipe11],
   },
   {
     id: 7,

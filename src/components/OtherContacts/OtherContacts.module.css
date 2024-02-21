@@ -36,12 +36,21 @@
   gap: 1rem;
   margin-bottom: 1rem;
   color: white;
+  align-items: center;
 }
 
 .emailLink {
   display: flex;
   color: white;
   gap: 1rem;
+}
+
+.mailtoLink {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  gap: 1rem;
+  align-items: center;
 }
 
 .btnCopy {
