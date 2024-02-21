@@ -9,12 +9,14 @@ import { usePageContext } from '../../provider/pageProvider';
 
 function DropMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const { setPaginaAtualProjects, setPaginaAtualCourses } = usePageContext();
+  const { setPaginaAtualProjects,
+    setPaginaAtualCourses, setExibition } = usePageContext();
 
   const closeMenuLink = () => {
     setIsOpen(false);
     setPaginaAtualCourses(1);
     setPaginaAtualProjects(1);
+    setExibition(true);
   };
 
   const handleBtnDownload = () => {
