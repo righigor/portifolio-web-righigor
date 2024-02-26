@@ -42,16 +42,6 @@ function ProjectsDetailed() {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      nextImg();
-    }, 6000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [imgIndex]);
-
-  useEffect(() => {
     nextImg();
   }, []);
 

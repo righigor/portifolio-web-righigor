@@ -2,7 +2,7 @@ import { Projects } from '../types/Projects';
 import trybelogo from '../images/trybe-logo.png';
 import { descAppReceitas, descFrontStore, descPasswordManager,
   descTestsReact, descTrybetunes, descTrybewarts, descBlogsApi,
-  descNoteManager, descPollsApi, descDeliveryApp } from './description';
+  descNoteManager, descPollsApi, descDeliveryApp, descGame } from './description';
 import { twimg1, twimg2, twimg3, twimg4, twimg5,
   twimg6, twimg7, twheader } from './images/trybewarts';
 import { pwimg1, pwimg2, pwimg3, pwimg4, pwheader } from './images/password-manager';
@@ -10,7 +10,8 @@ import { blogimg1, blogimg2, blogimg3, blogimg4, blogimg5,
   blogimg6, blogimg7, blogimg8, blogimg9, blogimg10,
   blogimg11, blogimg12, blogimg13, blogimg14, blogheader } from './images/blogs-api';
 import { tunesheader } from './images/trybetunes';
-import { rtlheader } from './images/tests-react';
+import { rtlheader, test1, test2, test3, test4, test5,
+  test6 } from './images/tests-react';
 import { storeheader } from './images/front-on-store';
 import { recipeheader, recipe1, recipe10, recipe11, recipe2, recipe3,
   recipe4, recipe5, recipe6, recipe7, recipe8, recipe9 } from './images/recipe-app';
@@ -21,6 +22,8 @@ import { pollheader, pollimg1, pollimg2, pollimg3, pollimg4,
   pollimg5, pollimg6, pollimg7, pollimg8 } from './images/poll-api';
 import { headerdelivery, deliveryimg1, deliveryimg2, deliveryimg3,
   deliveryimg4, deliveryimg5 } from './images/delivery-app';
+import { game01, game02, game03, game04, game05,
+  game06, game07, game08, game09, game10, headergame } from './images/passos-castle';
 
 export const projects: Projects[] = [
   {
@@ -61,7 +64,7 @@ export const projects: Projects[] = [
     tags: ['Front-End', 'RTL'],
     github_link: 'https://github.com/righigor/trybe-exercicios/tree/main/02-Front-End/Secao04-Testes-Automatizados-com-React-Testing-Library/Dia04-Projeto-Testes-em-React',
     header: rtlheader,
-    images: [trybelogo],
+    images: [test1, test2, test3, test4, test5, test6],
   },
   {
     id: 5,
@@ -114,7 +117,7 @@ export const projects: Projects[] = [
     school_id: 2,
     description: descPollsApi,
     tags: ['Back-End', 'Prisma', 'TypeScript', 'WebSocket', 'Redis'],
-    github_link: 'https://github.com/righigor/rocketseat/tree/main/nlw-expert/polls-app',
+    github_link: 'https://github.com/righigor/rocketseat/tree/main/nlw-expert/polls-api',
     header: pollheader,
     images: [pollimg1, pollimg2, pollimg3, pollimg4, pollimg5, pollimg6, pollimg7,
       pollimg8],
@@ -129,5 +132,16 @@ export const projects: Projects[] = [
     github_link: 'https://github.com/righigor/rocketseat/tree/main/nlw-expert/delivery-app',
     header: headerdelivery,
     images: [deliveryimg1, deliveryimg2, deliveryimg3, deliveryimg4, deliveryimg5],
+  },
+  {
+    id: 11,
+    name: "The Passos's Castle",
+    school_id: 3,
+    description: descGame,
+    tags: ['Python', 'Game', 'Object-Oriented Programming'],
+    github_link: 'https://github.com/righigor/Game-OOP-in-Python',
+    header: headergame,
+    images: [game01, game02, game03, game04, game05,
+      game06, game07, game08, game09, game10],
   },
 ];
