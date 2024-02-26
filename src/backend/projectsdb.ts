@@ -9,7 +9,7 @@ import { pwimg1, pwimg2, pwimg3, pwimg4, pwheader } from './images/password-mana
 import { blogimg1, blogimg2, blogimg3, blogimg4, blogimg5,
   blogimg6, blogimg7, blogimg8, blogimg9, blogimg10,
   blogimg11, blogimg12, blogimg13, blogimg14, blogheader } from './images/blogs-api';
-import { tunesheader } from './images/trybetunes';
+import { tunesheader, tunes01, tunes02, tunes03, tunes04 } from './images/trybetunes';
 import { rtlheader, test1, test2, test3, test4, test5,
   test6 } from './images/tests-react';
 import { storeheader } from './images/front-on-store';
@@ -54,7 +54,7 @@ export const projects: Projects[] = [
     tags: ['Front-End', 'CSS', 'React', 'TypeScript', 'API'],
     github_link: 'https://github.com/righigor/trybe-exercicios/tree/main/02-Front-End/Secao03-Aprofundando-no-React/Dia04-Projeto-Trybetunes',
     header: tunesheader,
-    images: [trybelogo],
+    images: [tunes01, tunes02, tunes03, tunes04],
   },
   {
     id: 4,
