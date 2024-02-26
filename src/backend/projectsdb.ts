@@ -2,7 +2,7 @@ import { Projects } from '../types/Projects';
 import trybelogo from '../images/trybe-logo.png';
 import { descAppReceitas, descFrontStore, descPasswordManager,
   descTestsReact, descTrybetunes, descTrybewarts, descBlogsApi,
-  descNoteManager, descPollsApi, descDeliveryApp } from './description';
+  descNoteManager, descPollsApi, descDeliveryApp, descGame } from './description';
 import { twimg1, twimg2, twimg3, twimg4, twimg5,
   twimg6, twimg7, twheader } from './images/trybewarts';
 import { pwimg1, pwimg2, pwimg3, pwimg4, pwheader } from './images/password-manager';
@@ -21,6 +21,8 @@ import { pollheader, pollimg1, pollimg2, pollimg3, pollimg4,
   pollimg5, pollimg6, pollimg7, pollimg8 } from './images/poll-api';
 import { headerdelivery, deliveryimg1, deliveryimg2, deliveryimg3,
   deliveryimg4, deliveryimg5 } from './images/delivery-app';
+import { game01, game02, game03, game04, game05,
+  game06, game07, game08, game09, game10, headergame } from './images/passos-castle';
 
 export const projects: Projects[] = [
   {
@@ -129,5 +131,16 @@ export const projects: Projects[] = [
     github_link: 'https://github.com/righigor/rocketseat/tree/main/nlw-expert/delivery-app',
     header: headerdelivery,
     images: [deliveryimg1, deliveryimg2, deliveryimg3, deliveryimg4, deliveryimg5],
+  },
+  {
+    id: 11,
+    name: "The Passos's Castle",
+    school_id: 3,
+    description: descGame,
+    tags: ['Python', 'Game', 'Object-Oriented Programming'],
+    github_link: 'https://github.com/righigor/Game-OOP-in-Python',
+    header: headergame,
+    images: [game01, game02, game03, game04, game05,
+      game06, game07, game08, game09, game10],
   },
 ];
