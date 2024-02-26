@@ -10,7 +10,8 @@ import { blogimg1, blogimg2, blogimg3, blogimg4, blogimg5,
   blogimg6, blogimg7, blogimg8, blogimg9, blogimg10,
   blogimg11, blogimg12, blogimg13, blogimg14, blogheader } from './images/blogs-api';
 import { tunesheader } from './images/trybetunes';
-import { rtlheader } from './images/tests-react';
+import { rtlheader, test1, test2, test3, test4, test5,
+  test6 } from './images/tests-react';
 import { storeheader } from './images/front-on-store';
 import { recipeheader, recipe1, recipe10, recipe11, recipe2, recipe3,
   recipe4, recipe5, recipe6, recipe7, recipe8, recipe9 } from './images/recipe-app';
@@ -63,7 +64,7 @@ export const projects: Projects[] = [
     tags: ['Front-End', 'RTL'],
     github_link: 'https://github.com/righigor/trybe-exercicios/tree/main/02-Front-End/Secao04-Testes-Automatizados-com-React-Testing-Library/Dia04-Projeto-Testes-em-React',
     header: rtlheader,
-    images: [trybelogo],
+    images: [test1, test2, test3, test4, test5, test6],
   },
   {
     id: 5,
