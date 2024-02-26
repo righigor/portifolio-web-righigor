@@ -116,7 +116,7 @@ export const projects: Projects[] = [
     school_id: 2,
     description: descPollsApi,
     tags: ['Back-End', 'Prisma', 'TypeScript', 'WebSocket', 'Redis'],
-    github_link: 'https://github.com/righigor/rocketseat/tree/main/nlw-expert/polls-app',
+    github_link: 'https://github.com/righigor/rocketseat/tree/main/nlw-expert/polls-api',
     header: pollheader,
     images: [pollimg1, pollimg2, pollimg3, pollimg4, pollimg5, pollimg6, pollimg7,
       pollimg8],
