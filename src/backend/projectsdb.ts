@@ -1,5 +1,4 @@
 import { Projects } from '../types/Projects';
-import trybelogo from '../images/trybe-logo.png';
 import { descAppReceitas, descFrontStore, descPasswordManager,
   descTestsReact, descTrybetunes, descTrybewarts, descBlogsApi,
   descNoteManager, descPollsApi, descDeliveryApp, descGame } from './description';
