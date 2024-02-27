@@ -12,7 +12,7 @@ import { blogimg1, blogimg2, blogimg3, blogimg4, blogimg5,
 import { tunesheader, tunes01, tunes02, tunes03, tunes04 } from './images/trybetunes';
 import { rtlheader, test1, test2, test3, test4, test5,
   test6 } from './images/tests-react';
-import { storeheader } from './images/front-on-store';
+import { storeheader, store01, store02, store03, store04 } from './images/front-on-store';
 import { recipeheader, recipe1, recipe10, recipe11, recipe2, recipe3,
   recipe4, recipe5, recipe6, recipe7, recipe8, recipe9 } from './images/recipe-app';
 import { noteimg1, noteimg2, noteimg3, noteimg4,
@@ -74,7 +74,7 @@ export const projects: Projects[] = [
     tags: ['Front-End', 'React', 'TypeScript', 'API'],
     github_link: 'https://github.com/righigor/trybe-exercicios/tree/main/02-Front-End/Secao05-Estilizacao-e-Metodologia-Agil/Dia04-Projeto-FrontEnd-Online-Store',
     header: storeheader,
-    images: [trybelogo],
+    images: [store01, store02, store03, store04],
   },
   {
     id: 6,
