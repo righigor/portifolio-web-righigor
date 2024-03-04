@@ -1,18 +1,13 @@
 import { Link } from 'react-router-dom';
-import style from './NavMenu.module.css';
-import curriculo from '../../resume/igor-righi-curriculo.pdf';
 import { usePageContext } from '../../provider/pageProvider';
+import style from './NavMenu.module.css';
+import { handleBtnDownload } from '../../utils/handleBtnDownload';
 
 function NavMenu() {
   const { setPaginaAtualProjects,
-    setPaginaAtualCourses, setExibition } = usePageContext();
-
-  const handleBtnDownload = () => {
-    const link = document.createElement('a');
-    link.href = curriculo;
-    link.download = 'curriculo-igor-righi';
-    link.click();
-  };
+    setPaginaAtualCourses, setExibition,
+    lang,
+  } = usePageContext();
 
   const handleClick = () => {
     setPaginaAtualCourses(1);
@@ -52,13 +47,14 @@ function NavMenu() {
       </div>
       <div>
         <button
-          title="Faça download do meu currículo"
+          title={ lang === 'pt' ? 'Baixar Currículo' : 'Download Resume' }
           className={ style.btn }
-          onClick={ handleBtnDownload }
+          onClick={ () => handleBtnDownload(lang) }
         >
-          Meu Currículo
+          { lang === 'pt' ? 'Meu Currículo' : 'My Resume' }
         </button>
       </div>
+
     </>
   );
 }

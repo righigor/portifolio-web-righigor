@@ -13,10 +13,16 @@ export type User = {
     email: string,
     wpp: string // https://wa.me/5531998397442/?text=Olá%20Igor%20Righi
   }
+  resume: Resume,
 };
 
 export type Skills = {
   id: number,
   skill: string,
   icon: string,
+};
+
+export type Resume = {
+  en: string,
+  pt: string,
 };

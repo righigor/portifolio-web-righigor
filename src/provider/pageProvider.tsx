@@ -1,13 +1,15 @@
 import React, { createContext, useContext, useState } from 'react';
 
-interface PageContextType {
+type PageContextType = {
   paginaAtualProjects: number,
   setPaginaAtualProjects: React.Dispatch<React.SetStateAction<number>>,
   paginaAtualCourses: number,
   setPaginaAtualCourses: React.Dispatch<React.SetStateAction<number>>,
   exibition: boolean,
-  setExibition: React.Dispatch<React.SetStateAction<boolean>>
-}
+  setExibition: React.Dispatch<React.SetStateAction<boolean>>,
+  lang: 'pt' | 'en',
+  setLang: React.Dispatch<React.SetStateAction<'en' | 'pt'>>
+};
 
 const PageContext = createContext<PageContextType | undefined>(undefined);
 
@@ -23,6 +25,7 @@ export function PageProvider({ children }: any) {
   const [paginaAtualProjects, setPaginaAtualProjects] = useState(1);
   const [paginaAtualCourses, setPaginaAtualCourses] = useState(1);
   const [exibition, setExibition] = useState(true);
+  const [lang, setLang] = useState<'pt' | 'en'>('pt');
 
   const contextValue = {
     paginaAtualProjects,
@@ -31,6 +34,8 @@ export function PageProvider({ children }: any) {
     setPaginaAtualCourses,
     exibition,
     setExibition,
+    lang,
+    setLang,
   };
 
   return (

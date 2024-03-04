@@ -48,6 +48,12 @@
   background-color: var(--blue-100);
 }
 
+.btn:disabled {
+  background-color: #a5c3e8;
+  color: #666;
+  cursor: not-allowed;
+}
+
 @media only screen and (max-width: 480px) {
   .formContainer input {
     width: 70%;

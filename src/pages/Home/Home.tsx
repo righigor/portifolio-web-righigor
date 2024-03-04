@@ -10,6 +10,7 @@ import AboutHome from '../../components/AboutHome/AboutHome';
 
 function Home() {
   const [textoVisivel, setTextoVisivel] = useState('');
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -59,9 +60,7 @@ function Home() {
           />
         </div>
       </div>
-
       <AboutHome />
-
       <TopProjects />
     </div>
   );

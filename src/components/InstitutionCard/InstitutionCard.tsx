@@ -17,7 +17,6 @@ function InstitutionCard({ content }: InstitutionCardProp) {
           </div>
           <div>
             <h3 className={ style.nameCard }>{school.name}</h3>
-            {/* <p className={ style.sm }>Saiba mais...</p> */}
           </div>
         </Link>
 
