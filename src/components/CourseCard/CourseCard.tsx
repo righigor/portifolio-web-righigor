@@ -23,9 +23,7 @@ function CourseCard({ content }: CourseCardProp) {
             <h3 className={ style.nameCard }>{course.name}</h3>
           </div>
         </Link>
-
-      )) }
-
+      ))}
     </div>
   );
 }

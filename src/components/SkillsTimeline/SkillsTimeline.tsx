@@ -9,7 +9,6 @@ import './vertical.css';
 
 function SkillsTimeline() {
   const [skillsArray, setSkillsArray] = useState<Skills[]>();
-  // const hatStyle = { background: '#194977', border-color: 'red' };
 
   useEffect(() => {
     setSkillsArray(user.skills);

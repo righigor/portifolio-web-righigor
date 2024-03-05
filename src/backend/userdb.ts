@@ -2,14 +2,11 @@
 import { differenceInYears } from 'date-fns';
 import { Skills, User } from '../types/User';
 import profile from '../images/assets/Foto 3x4.jpg';
+import resume from './resume/resume-igor-righi.pdf';
+import resumeEn from './resume/resume-igor-righi-en.pdf';
 import {
-  html, react,
-  ts, js,
-  cont, redux,
-  css, front,
-  back, python,
-  docker, sql,
-  poo, tailwind,
+  html, react, ts, js, cont, redux, css, front,
+  back, python, docker, sql, poo, tailwind,
 } from '../icons/skills';
 
 const skillsArray: Skills[] = [
@@ -104,5 +101,9 @@ export const user: User = {
     instagram: 'https://www.instagram.com/righigor/',
     email: 'righigordev@gmail.com',
     wpp: 'https://wa.me/5531998397442/?text=Olá%20Igor%20Righi,%20tudo%20bem?',
+  },
+  resume: {
+    en: resumeEn,
+    pt: resume,
   },
 };

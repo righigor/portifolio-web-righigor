@@ -4,8 +4,11 @@ import aboutPic from '../../images/about-capa.jpeg';
 import { react, ts, css, python, docker, sql } from '../../icons/skills';
 import resumeLogo from '../../icons/resume-icon.svg';
 import { user } from '../../backend/userdb';
+import { usePageContext } from '../../provider/pageProvider';
 
 function AboutHome() {
+  const { lang } = usePageContext();
+
   return (
     <div className={ style.divContainer }>
       <div className={ style.aboutContainer }>
@@ -32,13 +35,13 @@ function AboutHome() {
           </span>
 
           <button
-            title="Faça download do meu currículo"
+            title={ lang === 'pt' ? 'Baixar Currículo' : 'Download Resume' }
             className={ style.btn }
-            onClick={ handleBtnDownload }
+            onClick={ () => handleBtnDownload(lang) }
           >
             <img src={ resumeLogo } alt="" />
             <span>
-              Meu Currículo
+              { lang === 'pt' ? 'Meu Currículo' : 'My Resume' }
             </span>
           </button>
         </div>

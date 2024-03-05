@@ -2,28 +2,23 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import style from './DropMenu.module.css';
-import curriculo from '../../resume/igor-righi-curriculo.pdf';
+import { usePageContext } from '../../provider/pageProvider';
+import { handleBtnDownload } from '../../utils/handleBtnDownload';
 import hamMenu from '../../icons/hamburguer-menu.svg';
 import closeMenu from '../../icons/close-menu.svg';
-import { usePageContext } from '../../provider/pageProvider';
 
 function DropMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const { setPaginaAtualProjects,
-    setPaginaAtualCourses, setExibition } = usePageContext();
+    setPaginaAtualCourses, setExibition,
+    lang,
+  } = usePageContext();
 
   const closeMenuLink = () => {
     setIsOpen(false);
     setPaginaAtualCourses(1);
     setPaginaAtualProjects(1);
     setExibition(true);
-  };
-
-  const handleBtnDownload = () => {
-    const link = document.createElement('a');
-    link.href = curriculo;
-    link.download = 'curriculo-igor-righi';
-    link.click();
   };
 
   return (
@@ -69,11 +64,11 @@ function DropMenu() {
             </Link>
             <div className={ style.linkbottom } />
             <button
-              title="Faça download do meu currículo"
+              title={ lang === 'pt' ? 'Baixar Currículo' : 'Download Resume' }
               className={ style.btn }
-              onClick={ handleBtnDownload }
+              onClick={ () => handleBtnDownload(lang) }
             >
-              Meu Currículo
+              { lang === 'pt' ? 'Meu Currículo' : 'My Resume' }
             </button>
           </div>
         </div>

@@ -8,7 +8,6 @@ function QuickContact() {
       <div className={ style.btnContact }>
         <Link to="/contact" className={ style.link }>
           <span>Entre em Contato</span>
-          {/* <img src={ arrow } alt="" /> */}
         </Link>
       </div>
     </div>

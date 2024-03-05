@@ -100,7 +100,11 @@ function EmailContactForm() {
           />
         </label>
         <br />
-        <button type="submit" className={ style.btn }>
+        <button
+          type="submit"
+          className={ style.btn }
+          disabled={ !dataForm.name || !dataForm.message }
+        >
           Enviar
         </button>
       </form>

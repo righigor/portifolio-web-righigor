@@ -1,8 +1,13 @@
-import curriculo from '../resume/igor-righi-curriculo.pdf';
+import { user } from '../backend/userdb';
 
-export const handleBtnDownload = () => {
+export const handleBtnDownload = (language: string) => {
   const link = document.createElement('a');
-  link.href = curriculo;
-  link.download = 'curriculo-igor-righi';
+  if (language === 'en') {
+    link.href = user.resume.en;
+    link.download = 'resume-igor-righi-en';
+    link.click();
+  }
+  link.href = user.resume.pt;
+  link.download = 'resume-igor-righi';
   link.click();
 };
