@@ -1,4 +1,5 @@
 import styles from './MaintanancePage.module.css';
+import resume from '../../backend/resume/resume-igor-righi-front-end.pdf';
 
 function MaintenancePage() {
   return (
@@ -16,7 +17,7 @@ function MaintenancePage() {
       </div>
       <div>
         <a
-          href="/path/to/seu-curriculo.pdf"
+          href={ resume }
           download
           className={ styles.button }
         >
