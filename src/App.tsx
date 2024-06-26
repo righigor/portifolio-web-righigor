@@ -1,16 +1,4 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home/Home';
-import NotFound from './pages/NotFound/NotFound';
-import Layout from './components/Layout';
-import AboutMe from './pages/AboutMe/AboutMe';
-import Skills from './pages/Skills/Skills';
-import Projects from './pages/Projects/Projects';
-import Education from './pages/Education/Education';
-import Contact from './pages/Contact/Contact';
-import CourseDetailed from './pages/CourseDetailed/CourseDetailed';
-import Institutions from './pages/Institutions/Institutions';
-import ProjectsDetailed from './pages/ProjectsDetailed/ProjectsDetailed';
 import MaintenancePage from './pages/MaintanancePage/MaintanancePage';
 
 function App() {
