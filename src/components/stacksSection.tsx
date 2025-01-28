@@ -5,7 +5,8 @@ import mala from '../icons/suitcase.png';
 export default function StacksSection() {
   return (
     <div
-      className="flex flex-col size-full items-center text-center justify-center overflow-hidden bg-gray-900 px-8"
+      id="stacks"
+      className="flex flex-col size-full items-center text-center justify-center overflow-hidden bg-gray-900 px-8 h-screen"
     >
       <div className="text-2xl text-white flex gap-4 justify-center items-center content-center">
         <h2>Minha Bagagem de Desenvolvimento</h2>

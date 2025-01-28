@@ -1,27 +1,46 @@
 /* eslint-disable react/no-multi-comp */
 /* eslint-disable react/function-component-definition */
 /* eslint-disable max-len */
+import { Service } from '../types/Services';
 import { CardSpotlight } from './ui/card-spotlight';
 
-export function CardSpotlightDemo() {
+interface ServicesCardProps {
+  service: Service;
+}
+
+export function CardSpotlightDemo({ service }: ServicesCardProps) {
   return (
-    <CardSpotlight className="w-96">
-      <p className="text-xl font-bold relative z-20 mt-2 text-white">
-        Landing Page
-      </p>
-      <div className="text-neutral-200 mt-4 relative z-20">
-        Follow these steps to secure your account:
+    <CardSpotlight className="w-full">
+      <div className="flex items-center justify-between gap-2">
+        <p className="text-xl font-bold relative z-20 mt-2 text-white">
+          {service.name}
+        </p>
+        <span>{service.icon}</span>
+      </div>
+      <div className="text-neutral-200 mt-4 relative z-20 text-justify">
+        {service.idealFor}
         <ul className="list-none  mt-2">
-          <Step title="Enter your email address" />
-          <Step title="Create a strong password" />
-          <Step title="Set up two-factor authentication" />
-          <Step title="Verify your identity" />
+          {service.includes.map((item, i) => (
+            <Step key={ i } title={ item } />
+          ))}
         </ul>
       </div>
-      <p className="text-neutral-300 mt-4 relative z-20 text-sm">
-        Ensuring your account is properly secured helps protect your personal
-        information and data.
+      <p className="text-white mt-4 relative z-20 text-sm">
+        {service.deliveryTime}
       </p>
+      <div className="flex align-middle justify-center items-center p-2 flex-col md:flex-row lg:flex-row">
+        <p className="text-neutral-300 mt-4 relative z-20 text-sm md:w-2/3 lg:w-2/3 w-full">
+          {service.additionalInfo}
+        </p>
+        <a
+          href={ service.whatsappButton.url }
+          target="_blank"
+          rel="noreferrer"
+          className="bg-green-600 text-white md:w-1/3 md:p-2 lg:w-1/3 lg:p-2 text-sm items-center align-middle justify-center flex  text-center p-4 rounded-full duration-500 ease-in-out mt-4 relative z-20 hover:bg-green-800"
+        >
+          {service.whatsappButton.text}
+        </a>
+      </div>
     </CardSpotlight>
   );
 }

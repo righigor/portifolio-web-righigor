@@ -1,3 +1,4 @@
+import { Link as ScrollLink } from 'react-scroll';
 import DownloadBtn from './downloadBtn';
 
 /* eslint-disable max-len */
@@ -14,37 +15,61 @@ export default function SideMenu({ closeMenu, isOpen }: SideMenuProps) {
       }` }
     >
       <nav>
-        <ul
-          className="flex flex-col items-center space-y-3"
-        >
+        <ul className="flex flex-col items-center space-y-3">
           <li className="group relative">
-            <a href="/" className="block py-2 px-4">
+            <ScrollLink
+              to="home"
+              smooth
+              duration={ 500 }
+              onClick={ closeMenu }
+              className="block py-2 px-4"
+            >
               Home
-            </a>
+            </ScrollLink>
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full" />
           </li>
           <li className="group relative">
-            <a href="/about" className="block py-2 px-4">
+            <ScrollLink
+              to="about"
+              smooth
+              duration={ 500 }
+              className="block py-2 px-4"
+            >
               Sobre mim
-            </a>
+            </ScrollLink>
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full" />
           </li>
           <li className="group relative">
-            <a href="/services" className="block py-2 px-4">
+            <ScrollLink
+              to="stacks"
+              smooth
+              duration={ 500 }
+              className="block py-2 px-4"
+            >
               Especialidades
-            </a>
+            </ScrollLink>
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full" />
           </li>
           <li className="group relative">
-            <a href="/portfolio" className="block py-2 px-4">
+            <ScrollLink
+              to="services"
+              smooth
+              duration={ 500 }
+              className="block py-2 px-4"
+            >
               Meus Trabalhos
-            </a>
+            </ScrollLink>
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full" />
           </li>
           <li className="group relative">
-            <a href="/contact" className="block py-2 px-4">
+            <ScrollLink
+              to="contact"
+              smooth
+              duration={ 500 }
+              className="block py-2 px-4"
+            >
               Entre em Contato
-            </a>
+            </ScrollLink>
             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 ease-out group-hover:w-full" />
           </li>
           <li>

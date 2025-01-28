@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable react/jsx-max-depth */
 /* eslint-disable max-len */
-
+import { Link as ScrollLink } from 'react-scroll';
 import { useState } from 'react';
 import logo from '../icons/logo/logo-ir-clean.png';
 
@@ -28,62 +28,74 @@ export function NavBar() {
             <nav aria-label="Global" className="hidden md:block">
               <ul className="flex items-center gap-6 text-sm">
                 <li className="group relative">
-                  <a
-                    className="text-gray-100"
+                  <ScrollLink
+                    to="about"
+                    smooth
+                    duration={ 500 }
+                    className="text-gray-100 cursor-pointer"
                     href="a"
                   >
                     {' '}
                     Sobre mim
                     {' '}
-                  </a>
+                  </ScrollLink>
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 ease-out group-hover:w-full" />
                 </li>
 
                 <li className="group relative">
-                  <a
-                    className="text-gray-100"
+                  <ScrollLink
+                    to="stacks"
+                    smooth
+                    duration={ 500 }
+                    className="text-gray-100 cursor-pointer"
                     href="a"
                   >
                     {' '}
                     Especialidades
                     {' '}
-                  </a>
+                  </ScrollLink>
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 ease-out group-hover:w-full" />
                 </li>
 
                 <li className="group relative">
-                  <a
-                    className="text-gray-100"
-                    href="a"
+                  <ScrollLink
+                    to="services"
+                    smooth
+                    duration={ 500 }
+                    className="text-gray-100 cursor-pointer"
                   >
                     {' '}
                     Serviços
                     {' '}
-                  </a>
+                  </ScrollLink>
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 ease-out group-hover:w-full" />
                 </li>
 
                 <li className="group relative">
-                  <a
-                    className="text-gray-100"
-                    href="a"
+                  <ScrollLink
+                    to="jobs"
+                    smooth
+                    duration={ 500 }
+                    className="text-gray-100 cursor-pointer"
                   >
                     {' '}
                     Meus Trabalhos
                     {' '}
-                  </a>
+                  </ScrollLink>
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 ease-out group-hover:w-full" />
                 </li>
 
                 <li className="group relative">
-                  <a
-                    className="text-gray-100"
-                    href="a"
+                  <ScrollLink
+                    to="contact"
+                    smooth
+                    duration={ 500 }
+                    className="text-gray-100 cursor-pointer"
                   >
                     {' '}
                     Entre em Contato
                     {' '}
-                  </a>
+                  </ScrollLink>
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white transition-all duration-300 ease-out group-hover:w-full" />
                 </li>
               </ul>

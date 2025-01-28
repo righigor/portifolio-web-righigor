@@ -1,16 +1,14 @@
-import CarouselSection from './components/carouselSection';
-import HeroIcon from './components/heroIcon';
-import { NavBar } from './components/navbar';
-import StacksSection from './components/stacksSection';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import LandingPage from './pages/landingPage/LandingPage';
 
 function App() {
   return (
-    <>
-      <NavBar />
-      <HeroIcon />
-      <StacksSection />
-      <CarouselSection />
-    </>
+    <Routes>
+      <Route path="/" element={ <Home /> } />
+      <Route path="/landing-page/:nome" element={ <LandingPage /> } />
+      <Route path="*" element={ <h1>Not Found</h1> } />
+    </Routes>
   );
 }
 
