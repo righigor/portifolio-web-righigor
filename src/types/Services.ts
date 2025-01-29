@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export type Service = {
   name: string; // Nome do serviço
   idealFor: string; // Frase explicando para quem ou para que é ideal
@@ -17,3 +19,8 @@ export type LPServiceType = {
   preco?: number;
   icone: JSX.Element;
 }
+
+export type ListItem = {
+  title: string;
+  items: ReactNode[];
+};
